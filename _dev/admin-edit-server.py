@@ -113,15 +113,22 @@ def parse_project_html(html_path):
                         break
                     description += p.get_text().strip() + '\n\n'
             
-            # Extract acknowledgment
+            # Extract acknowledgment - always populate so user can edit
             acknowledgment = ''
-            ack_section = soup.select('hr')
-            if len(ack_section) > 1:  # There's an acknowledgment hr
-                ack_h3 = soup.find('h3', string='Acknowledgment')
-                if ack_h3:
-                    ack_p = ack_h3.find_next_sibling('p')
-                    if ack_p and 'Rafael Lozano-Hemmer' not in ack_p.get_text():
-                        acknowledgment = ack_p.get_text().strip()
+            ack_h3 = soup.find('h3', string='Acknowledgment')
+            if ack_h3:
+                # Get all content after the h3 until the next hr or end of page-body
+                ack_content = []
+                for sibling in ack_h3.next_siblings:
+                    if sibling.name == 'p':
+                        ack_text = sibling.get_text().strip()
+                        ack_content.append(ack_text)
+                    elif sibling.name in ['h3', 'hr']:
+                        break
+                
+                if ack_content:
+                    acknowledgment = '\n\n'.join(ack_content)
+                    print(f"DEBUG: Found acknowledgment: {acknowledgment[:100]}...")
             
             return {
                 'title': title,
@@ -336,24 +343,52 @@ def update_project(slug):
         
         # Handle images if provided
         if 'images' in data and data['images']:
-            # Clear old numbered images (keep cover.jpg for now)
-            if os.path.exists(images_dir):
-                for f in os.listdir(images_dir):
-                    if f.startswith(('0', '1', '2', '3', '4', '5', '6', '7', '8', '9')):
-                        os.remove(os.path.join(images_dir, f))
-            
             os.makedirs(images_dir, exist_ok=True)
             
-            # Process and copy new images
-            numbered_images = []
-            for idx, img_data in enumerate(data['images'], start=1):
-                src_path = img_data['path']
-                ext = os.path.splitext(src_path)[1]
-                dest_name = f"{idx:02d}_image{ext}"
-                dest_path = os.path.join(images_dir, dest_name)
+            # Check if we're reordering existing images or loading new ones
+            images_are_from_project = all(
+                img_data['path'].startswith(images_dir) 
+                for img_data in data['images']
+            )
+            
+            if images_are_from_project:
+                # Reordering existing images - rename in place
+                # First, rename all to temp names to avoid conflicts
+                temp_mapping = []
+                for idx, img_data in enumerate(data['images'], start=1):
+                    src_path = img_data['path']
+                    ext = os.path.splitext(src_path)[1]
+                    temp_name = f"temp_{idx:02d}_image{ext}"
+                    temp_path = os.path.join(images_dir, temp_name)
+                    
+                    if os.path.exists(src_path):
+                        os.rename(src_path, temp_path)
+                        temp_mapping.append((temp_path, f"{idx:02d}_image{ext}"))
                 
-                shutil.copy2(src_path, dest_path)
-                numbered_images.append(dest_name)
+                # Then rename temp files to final names
+                numbered_images = []
+                for temp_path, final_name in temp_mapping:
+                    final_path = os.path.join(images_dir, final_name)
+                    os.rename(temp_path, final_path)
+                    numbered_images.append(final_name)
+            else:
+                # Loading new images - copy from external source
+                # Clear old numbered images
+                if os.path.exists(images_dir):
+                    for f in os.listdir(images_dir):
+                        if f.startswith(('0', '1', '2', '3', '4', '5', '6', '7', '8', '9')):
+                            os.remove(os.path.join(images_dir, f))
+                
+                # Copy new images
+                numbered_images = []
+                for idx, img_data in enumerate(data['images'], start=1):
+                    src_path = img_data['path']
+                    ext = os.path.splitext(src_path)[1]
+                    dest_name = f"{idx:02d}_image{ext}"
+                    dest_path = os.path.join(images_dir, dest_name)
+                    
+                    shutil.copy2(src_path, dest_path)
+                    numbered_images.append(dest_name)
             
             # Regenerate cover from first image
             if numbered_images:
