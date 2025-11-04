@@ -17,7 +17,7 @@
     "link": "web.unal.edu.co",
     "role": "C++, Software",
     "slug": "pulsos-del-agua-2025",
-    "image": "projects/pulsos-del-agua-2025/images/cover.jpg",
+    "image": "projects/pulsos-del-agua-2025/images/cover.png",
     "hasDetailPage": true
   },
   {
@@ -27,7 +27,7 @@
     "link": "https://www.lozano-hemmer.com/dark_ride.php",
     "role": "Hardware, Software",
     "slug": "dark-ride-2024",
-    "image": "projects/dark-ride-2024/images/cover.jpg",
+    "image": "projects/dark-ride-2024/images/cover.png",
     "hasDetailPage": true
   },
   {
@@ -57,7 +57,7 @@
     "link": "https://www.lozano-hemmer.com/climate_parliament.php",
     "role": "Hardware",
     "slug": "climate-parliament-2024",
-    "image": "projects/climate-parliament-2024/images/cover.jpg",
+    "image": "projects/climate-parliament-2024/images/cover.png",
     "hasDetailPage": true
   },
   {
@@ -67,7 +67,7 @@
     "link": "https://www.lozano-hemmer.com/pulse_agglomerate.php",
     "role": "C++, Hardware, Performance, Software",
     "slug": "pulse-agglomerate-2024",
-    "image": "projects/pulse-agglomerate-2024/images/cover.jpg",
+    "image": "projects/pulse-agglomerate-2024/images/cover.jpeg",
     "hasDetailPage": true
   },
   {
@@ -117,7 +117,7 @@
     "link": "https://www.lozano-hemmer.com/collider.php",
     "role": "Electronics, Firmware",
     "slug": "collider-2023",
-    "image": "projects/collider-2023/images/cover.jpg",
+    "image": "projects/collider-2023/images/cover.png",
     "hasDetailPage": true
   },
   {
@@ -187,7 +187,7 @@
     "link": "https://33-questions.glitch.me/",
     "role": "Java Script",
     "slug": "33-questions-per-minute-online-2021",
-    "image": "assets/projects/33-questions-per-minute.png",
+    "image": "projects/33-questions-per-minute-online-2021/images/cover.gif",
     "hasDetailPage": true
   },
   {
@@ -207,7 +207,7 @@
     "link": "https://www.lozano-hemmer.com/pulse_topology.php",
     "role": "Software",
     "slug": "pulse-topology-2021",
-    "image": "projects/pulse-topology-2021/images/cover.jpg",
+    "image": "projects/pulse-topology-2021/images/cover.gif",
     "hasDetailPage": true
   },
   {
@@ -217,7 +217,7 @@
     "link": "https://vimeo.com/491274258",
     "role": "Hardware, PCB Design, Software, Sourcing",
     "slug": "field-atmosphonia-2020",
-    "image": "projects/field-atmosphonia-2020/images/cover.jpg",
+    "image": "projects/field-atmosphonia-2020/images/cover.gif",
     "hasDetailPage": true
   },
   {
@@ -237,7 +237,7 @@
     "link": "https://vimeo.com/348107293",
     "role": "Software",
     "slug": "flag-beacon-2019",
-    "image": "projects/flag-beacon-2019/images/cover.jpg",
+    "image": "projects/flag-beacon-2019/images/cover.gif",
     "hasDetailPage": true
   },
   {
@@ -277,7 +277,7 @@
     "link": "http://www.lozano-hemmer.com/remote_pulse.php",
     "role": "Firmware, PCB Design, Software",
     "slug": "remote-pulse-2019",
-    "image": "projects/remote-pulse-2019/images/cover.jpg",
+    "image": "projects/remote-pulse-2019/images/cover.png",
     "hasDetailPage": true
   },
   {
@@ -307,7 +307,7 @@
     "link": "https://www.lozano-hemmer.com/sustained_coincidence.php",
     "role": "Software",
     "slug": "sustained-coincidence-2007-and-2019",
-    "image": "assets/projects/sustained-coincidence.jpg",
+    "image": "projects/sustained-coincidence-2007-and-2019/images/cover.jpg",
     "hasDetailPage": true
   },
   {
@@ -337,7 +337,7 @@
     "link": "http://www.lozano-hemmer.com/sandbox.php",
     "role": "Software",
     "slug": "sandbox-2010--2018--2023",
-    "image": "assets/projects/sandbox.jpg",
+    "image": "projects/sandbox-2010--2018--2023/images/cover.jpg",
     "hasDetailPage": true
   },
   {
@@ -387,7 +387,7 @@
     "link": "https://vimeo.com/226964493",
     "role": "Hardware, Software",
     "slug": "recorded-assembly-2017-2019-2023",
-    "image": "assets/projects/recorded-assembly.jpg",
+    "image": "projects/recorded-assembly-2017-2019-2023/images/cover.jpg",
     "hasDetailPage": true
   },
   {
@@ -397,7 +397,7 @@
     "link": "http://www.lozano-hemmer.com/wavefunction.php",
     "role": "Software",
     "slug": "wavefunction-2007-and-2017",
-    "image": "assets/projects/wavefunction.png",
+    "image": "projects/wavefunction-2007-and-2017/images/cover.png",
     "hasDetailPage": true
   },
   {
@@ -857,7 +857,7 @@
     "link": "",
     "role": "",
     "slug": "walk-the-line-2002",
-    "image": "projects/walk-the-line-2002/images/cover.jpg",
+    "image": "projects/walk-the-line-2002/images/cover.gif",
     "hasDetailPage": true
   },
   {
@@ -917,7 +917,7 @@
     "link": "",
     "role": "Animation",
     "slug": "grußt-unsre-berge-2000",
-    "image": "assets/projects/grußt-unsre-berge.jpg",
+    "image": "projects/grußt-unsre-berge-2000/images/cover.jpg",
     "hasDetailPage": true
   }
 ]
