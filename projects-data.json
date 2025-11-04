@@ -1,5 +1,25 @@
 [
   {
+    "name": "Pulse Canopy, 2025",
+    "year": "2025",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "https://www.lozano-hemmer.com/pulse_canopy.php",
+    "role": "Software, Hardware",
+    "slug": "pulse-canopy-2025",
+    "image": "projects/pulse-canopy-2025/images/cover.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Broken Mirror Poets, 2025",
+    "year": "2025",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "https://www.lozano-hemmer.com/broken_mirror_poets.php",
+    "role": "Software",
+    "slug": "broken-mirror-poets-2025",
+    "image": "projects/broken-mirror-poets-2025/images/cover.jpg",
+    "hasDetailPage": true
+  },
+  {
     "name": "Pulsos del agua, 2025",
     "year": "2025",
     "collaborator": "Nelson Vergara",
