@@ -63,7 +63,7 @@ async function loadImages() {
     }
 }
 
-function renderImages() {
+async function renderImages() {
     const container = document.getElementById('images-container');
     
     if (loadedImages.length === 0) {
@@ -71,13 +71,34 @@ function renderImages() {
         return;
     }
     
-    const listHTML = loadedImages.map((img, index) => `
-        <div class="image-item" draggable="true" data-index="${index}">
+    // Load base64 data for each image if not already loaded
+    const imagesWithData = [];
+    for (let index = 0; index < loadedImages.length; index++) {
+        const img = loadedImages[index];
+        if (!img.base64) {
+            try {
+                const response = await fetch('/api/serve-local-image', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ path: img.path })
+                });
+                const data = await response.json();
+                img.base64 = data.data;
+            } catch (error) {
+                console.error('Failed to load image:', img.path, error);
+                img.base64 = '';
+            }
+        }
+        imagesWithData.push({ ...img, index });
+    }
+    
+    const listHTML = imagesWithData.map((img) => `
+        <div class="image-item" draggable="true" data-index="${img.index}">
             <span class="drag-handle">☰</span>
-            <span class="image-number">${String(index + 1).padStart(2, '0')}</span>
-            <img src="file://${img.path}" class="image-thumbnail" alt="${img.name}">
+            <span class="image-number">${String(img.index + 1).padStart(2, '0')}</span>
+            <img src="${img.base64 || 'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\'/%3E'}" class="image-thumbnail" alt="${img.name}">
             <span class="image-name" title="${img.name}">${img.name}</span>
-            <button type="button" class="remove-image" data-index="${index}">×</button>
+            <button type="button" class="remove-image" data-index="${img.index}">×</button>
         </div>
     `).join('');
     
@@ -141,6 +162,26 @@ function handleDrop(e) {
 
 function handleDragEnd(e) {
     e.target.classList.remove('dragging');
+}
+
+async function updatePreviewImages() {
+    // Load base64 data for preview
+    for (let i = 0; i < loadedImages.length; i++) {
+        if (!loadedImages[i].base64) {
+            try {
+                const response = await fetch('/api/serve-local-image', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ path: loadedImages[i].path })
+                });
+                const data = await response.json();
+                loadedImages[i].base64 = data.data;
+            } catch (error) {
+                console.error('Failed to load image for preview:', loadedImages[i].path);
+            }
+        }
+    }
+    updatePreview();
 }
 
 function updatePreview() {
@@ -214,30 +255,38 @@ function updatePreview() {
     
     // Update images
     const imagesEl = document.getElementById('preview-images');
-    if (loadedImages.length > 0) {
+    if (loadedImages.length > 0 && loadedImages[0].base64) {
         let imagesHTML = '';
         
         // First two images in grid
-        if (loadedImages.length >= 2) {
+        if (loadedImages.length >= 2 && loadedImages[1].base64) {
             imagesHTML += `
                 <div class="image-grid">
                     <div class="image-column">
-                        <img src="file://${loadedImages[0].path}" alt="${name}">
+                        <img src="${loadedImages[0].base64}" alt="${name}">
                     </div>
                     <div class="image-column">
-                        <img src="file://${loadedImages[1].path}" alt="${name}">
+                        <img src="${loadedImages[1].base64}" alt="${name}">
                     </div>
+                </div>
+            `;
+        } else if (loadedImages.length === 1 && loadedImages[0].base64) {
+            imagesHTML += `
+                <div class="image-full">
+                    <img src="${loadedImages[0].base64}" alt="${name}">
                 </div>
             `;
         }
         
         // Remaining images full width
         for (let i = 2; i < loadedImages.length; i++) {
-            imagesHTML += `
-                <div class="image-full">
-                    <img src="file://${loadedImages[i].path}" alt="${name}">
-                </div>
-            `;
+            if (loadedImages[i].base64) {
+                imagesHTML += `
+                    <div class="image-full">
+                        <img src="${loadedImages[i].base64}" alt="${name}">
+                    </div>
+                `;
+            }
         }
         
         imagesEl.innerHTML = imagesHTML;
@@ -312,10 +361,10 @@ async function handleSubmit(e) {
         
         showMessage('Project created successfully! Redirecting...', 'success');
         
-        // Redirect after a short delay
+        // Redirect after a longer delay to ensure files are written
         setTimeout(() => {
             window.location.href = data.url;
-        }, 1500);
+        }, 2500);
         
     } catch (error) {
         showMessage(error.message, 'error');

@@ -1,5 +1,15 @@
 [
   {
+    "name": "test 2, 2027",
+    "year": "2027",
+    "collaborator": "Peter",
+    "link": "https://www.cnn.com",
+    "role": "hardware, wetware",
+    "slug": "test-2-2027",
+    "image": "projects/test-2-2027/images/cover.jpg",
+    "hasDetailPage": true
+  },
+  {
     "name": "test project, 2026",
     "year": "2026",
     "collaborator": "my self",

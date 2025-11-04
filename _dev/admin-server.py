@@ -209,6 +209,51 @@ def serve_main_site():
     """Serve main site for back link"""
     return send_from_directory(project_root, 'index.html')
 
+@app.route('/projects/<slug>/')
+@app.route('/projects/<slug>/index.html')
+def serve_project(slug):
+    """Serve project detail pages"""
+    project_dir = os.path.join(project_root, 'projects', slug)
+    return send_from_directory(project_dir, 'index.html')
+
+@app.route('/projects/<slug>/images/<filename>')
+def serve_project_image(slug, filename):
+    """Serve project images"""
+    images_dir = os.path.join(project_root, 'projects', slug, 'images')
+    return send_from_directory(images_dir, filename)
+
+@app.route('/api/serve-local-image', methods=['POST'])
+def serve_local_image():
+    """Serve a local image for preview (base64 encoded)"""
+    try:
+        data = request.json
+        image_path = data.get('path')
+        
+        if not image_path or not os.path.exists(image_path):
+            return jsonify({'error': 'Image not found'}), 404
+        
+        # Read image and convert to base64
+        with open(image_path, 'rb') as f:
+            import base64
+            image_data = base64.b64encode(f.read()).decode('utf-8')
+            
+        # Detect mime type
+        ext = os.path.splitext(image_path)[1].lower()
+        mime_types = {
+            '.jpg': 'image/jpeg',
+            '.jpeg': 'image/jpeg',
+            '.png': 'image/png',
+            '.gif': 'image/gif',
+            '.webp': 'image/webp'
+        }
+        mime_type = mime_types.get(ext, 'image/jpeg')
+        
+        return jsonify({
+            'data': f'data:{mime_type};base64,{image_data}'
+        })
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
 @app.route('/api/browse-images', methods=['POST'])
 def browse_images():
     """List images in specified folder"""
