@@ -89,8 +89,8 @@ function createProjectCard(project, index) {
             // CV links directly to cv.html
             window.location.href = 'cv.html';
         } else if (project.hasDetailPage) {
-            // Go to project detail page
-            window.location.href = `projects/${project.slug}.html`;
+            // Go to project folder (contains index.html)
+            window.location.href = `projects/${project.slug}/`;
         } else if (project.link) {
             // Fallback to external link if no detail page
             window.open(project.link, '_blank');
