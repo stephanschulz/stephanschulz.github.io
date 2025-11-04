@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add New Project - Admin</title>
+    <title>Edit Project - Admin</title>
     <link rel="stylesheet" href="/styles.css">
     <link rel="stylesheet" href="/admin/admin.css">
 </head>
@@ -12,14 +12,24 @@
         <!-- Form Panel -->
         <div class="form-panel">
             <div class="panel-header">
-                <h1>Add New Project</h1>
+                <h1>Edit Project</h1>
                 <div class="nav-links" style="display: flex; gap: 1rem;">
-                    <a href="edit.html" class="text-link">→ Edit Existing Project</a>
+                    <a href="index.html" class="text-link">→ Add New Project</a>
                     <a href="/index.html" class="back-link">← Back to Site</a>
                 </div>
             </div>
 
-            <form id="project-form">
+            <div class="form-section">
+                <h2>Select Project</h2>
+                <div class="form-group">
+                    <label for="project-select">Choose project to edit *</label>
+                    <select id="project-select" name="project-select" required>
+                        <option value="">-- Select a project --</option>
+                    </select>
+                </div>
+            </div>
+
+            <form id="project-form" style="opacity: 0.5; pointer-events: none;">
                 <div class="form-section">
                     <h2>Project Details</h2>
                     
@@ -70,25 +80,25 @@
                     <h2>Images</h2>
                     
                     <div class="form-group">
-                        <label for="image-folder">Image Folder Path</label>
+                        <label for="image-folder">Add/Replace Images (optional)</label>
                         <div class="folder-input-group">
-                            <input type="text" id="image-folder" name="image-folder" placeholder="/path/to/images">
-                            <button type="button" id="load-images-btn" class="btn-secondary">Load Images</button>
+                            <input type="text" id="image-folder" name="image-folder" placeholder="/path/to/new/images">
+                            <button type="button" id="load-images-btn" class="btn-secondary">Load New Images</button>
                         </div>
-                        <span class="hint">Paste the full path to a folder containing your images</span>
+                        <span class="hint">Leave empty to keep existing images. Load new images to replace all.</span>
                     </div>
 
                     <div id="images-container" class="images-container">
-                        <p class="placeholder-text">Load images from a folder to begin</p>
+                        <p class="placeholder-text">Select a project to see its images</p>
                     </div>
                 </div>
 
                 <div class="form-actions">
                     <button type="submit" class="btn-primary" id="submit-btn">
-                        <span class="btn-text">Create Project</span>
-                        <span class="btn-loading" style="display: none;">Creating...</span>
+                        <span class="btn-text">Update Project</span>
+                        <span class="btn-loading" style="display: none;">Updating...</span>
                     </button>
-                    <button type="reset" class="btn-secondary">Clear Form</button>
+                    <button type="button" class="btn-secondary" id="cancel-btn">Cancel</button>
                 </div>
 
                 <div id="message-area"></div>
@@ -105,11 +115,11 @@
                     <div class="breadcrumb">
                         <span>Stephan Schulz</span> / 
                         <span>Projects and Artworks</span> / 
-                        <span id="preview-name">Project Name</span>
+                        <span id="preview-name">Select a project</span>
                     </div>
 
                     <header>
-                        <h1 class="page-title" id="preview-title">Project Name</h1>
+                        <h1 class="page-title" id="preview-title">Select a project to edit</h1>
                         
                         <table class="properties">
                             <tbody id="preview-properties">
@@ -141,7 +151,7 @@
         </div>
     </div>
 
-    <script src="/admin/admin.js"></script>
+    <script src="/admin/edit.js"></script>
 </body>
 </html>
 
