@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Project - Admin</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/admin/admin.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Form Panel -->
+        <div class="form-panel">
+            <div class="panel-header">
+                <h1>Add New Project</h1>
+                <a href="/index.html" class="back-link">← Back to Site</a>
+            </div>
+
+            <form id="project-form">
+                <div class="form-section">
+                    <h2>Project Details</h2>
+                    
+                    <div class="form-group">
+                        <label for="name">Project Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="e.g., Dark Ride">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="year">Year *</label>
+                        <input type="number" id="year" name="year" required placeholder="2024" min="1900" max="2100">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="collaborator">Collaborator / For *</label>
+                        <input type="text" id="collaborator" name="collaborator" required placeholder="Rafael Lozano-Hemmer">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="official_site">Official Site</label>
+                        <input type="url" id="official_site" name="official_site" placeholder="https://...">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="role">I Did / Role *</label>
+                        <input type="text" id="role" name="role" required placeholder="Hardware, Software">
+                        <span class="hint">Comma-separated for multiple tags</span>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2>Content</h2>
+                    
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea id="description" name="description" rows="8" placeholder="Project description..."></textarea>
+                        <span class="hint">Use double line breaks for new paragraphs</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="acknowledgment">Acknowledgment</label>
+                        <textarea id="acknowledgment" name="acknowledgment" rows="3" placeholder="Optional acknowledgment text..."></textarea>
+                        <span class="hint">Leave empty for Rafael Lozano-Hemmer projects (auto-added)</span>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2>Images</h2>
+                    
+                    <div class="form-group">
+                        <label for="image-folder">Image Folder Path</label>
+                        <div class="folder-input-group">
+                            <input type="text" id="image-folder" name="image-folder" placeholder="/path/to/images">
+                            <button type="button" id="load-images-btn" class="btn-secondary">Load Images</button>
+                        </div>
+                        <span class="hint">Paste the full path to a folder containing your images</span>
+                    </div>
+
+                    <div id="images-container" class="images-container">
+                        <p class="placeholder-text">Load images from a folder to begin</p>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary" id="submit-btn">
+                        <span class="btn-text">Create Project</span>
+                        <span class="btn-loading" style="display: none;">Creating...</span>
+                    </button>
+                    <button type="reset" class="btn-secondary">Clear Form</button>
+                </div>
+
+                <div id="message-area"></div>
+            </form>
+        </div>
+
+        <!-- Preview Panel -->
+        <div class="preview-panel">
+            <div class="preview-header">
+                <h2>Live Preview</h2>
+            </div>
+            <div class="preview-content">
+                <div class="container" id="preview-container">
+                    <div class="breadcrumb">
+                        <span>Stephan Schulz</span> / 
+                        <span>Projects and Artworks</span> / 
+                        <span id="preview-name">Project Name</span>
+                    </div>
+
+                    <header>
+                        <h1 class="page-title" id="preview-title">Project Name</h1>
+                        
+                        <table class="properties">
+                            <tbody id="preview-properties">
+                                <tr class="property-row">
+                                    <th><span class="icon">👤</span>for</th>
+                                    <td id="preview-collaborator">Collaborator</td>
+                                </tr>
+                                <tr class="property-row">
+                                    <th><span class="icon">#</span>Year</th>
+                                    <td id="preview-year">2024</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </header>
+
+                    <hr class="properties-divider">
+
+                    <div class="page-body">
+                        <div id="preview-description">
+                            <p>Description will appear here...</p>
+                        </div>
+                        
+                        <div id="preview-images"></div>
+                        
+                        <div id="preview-acknowledgment"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/admin/admin.js"></script>
+</body>
+</html>
+

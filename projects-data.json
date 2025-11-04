@@ -1,14 +1,13 @@
 [
   {
-    "name": "Biography and Curriculum Vitae, 1978",
-    "year": "1978",
-    "collaborator": "Stephan Schulz",
-    "link": "cv.html",
-    "role": "CV",
-    "slug": "cv",
-    "image": "assets/projects/cv.jpg",
-    "hasDetailPage": false,
-    "isCV": true
+    "name": "test project, 2026",
+    "year": "2026",
+    "collaborator": "my self",
+    "link": "https://www.cbc.ca",
+    "role": "software, hardware",
+    "slug": "test-project-2026",
+    "image": "projects/test-project-2026/images/cover.jpg",
+    "hasDetailPage": true
   },
   {
     "name": "Pulsos del agua, 2025",
@@ -919,5 +918,16 @@
     "slug": "grußt-unsre-berge-2000",
     "image": "projects/grußt-unsre-berge-2000/images/cover.jpg",
     "hasDetailPage": true
+  },
+  {
+    "name": "Biography and Curriculum Vitae, 1978",
+    "year": "1978",
+    "collaborator": "Stephan Schulz",
+    "link": "cv.html",
+    "role": "CV",
+    "slug": "cv",
+    "image": "assets/projects/cv.jpg",
+    "hasDetailPage": false,
+    "isCV": true
   }
 ]
