@@ -1,5 +1,16 @@
 [
   {
+    "name": "Biography and Curriculum Vitae, 1978",
+    "year": "1978",
+    "collaborator": "Stephan Schulz",
+    "link": "cv.html",
+    "role": "CV",
+    "slug": "cv",
+    "image": "assets/projects/cv.jpg",
+    "hasDetailPage": false,
+    "isCV": true
+  },
+  {
     "name": "Pulsos del agua, 2025",
     "year": "2025",
     "collaborator": "Nelson Vergara",

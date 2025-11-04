@@ -85,8 +85,11 @@ function createProjectCard(project, index) {
     // Make card clickable - prioritize detail pages over external links
     card.style.cursor = 'pointer';
     card.addEventListener('click', () => {
-        if (project.hasDetailPage) {
-            // Go to project detail page (to be created)
+        if (project.isCV) {
+            // CV links directly to cv.html
+            window.location.href = 'cv.html';
+        } else if (project.hasDetailPage) {
+            // Go to project detail page
             window.location.href = `projects/${project.slug}.html`;
         } else if (project.link) {
             // Fallback to external link if no detail page
