@@ -37,21 +37,19 @@ build/
 # Node modules (if you add npm later)
 node_modules/
 
+# Development files and tools (not for production)
+_dev/
 notion-page/
-# Optional: Notion export files (keep organized)
 notion-export/
 *.zip
 
-*.jpg
-*.png
-*.gif
-*.svg
-*.webp
-*.mp4
-*.mov
-*.mp3
-*.wav
-*.ogg
-*.pdf
-*.docx
-*.doc
+# Documentation files (keep local only)
+*.md
+!README.md
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python

@@ -515,11 +515,18 @@ body {
 
 .image-column img,
 .image-column video,
+.image-column iframe,
 .image-full img,
-.image-full video {
+.image-full video,
+.image-full iframe {
     width: 100%;
     border-radius: 3px;
     display: block;
+}
+
+.image-full iframe {
+    aspect-ratio: 16 / 9;
+    border: none;
 }
 
 .image-full {
