@@ -12,6 +12,7 @@ from PIL import Image
 import re
 import webbrowser
 from threading import Timer
+import markdown
 
 # Get project root
 script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -112,12 +113,11 @@ def generate_project_html(project_data, images):
             </tbody>
         </table>'''
     
-    # Build description
+    # Build description from Markdown
     description_html = ''
     if description:
-        for para in description.split('\n\n'):
-            if para.strip():
-                description_html += f'<p>{para.strip()}</p>\n        '
+        md = markdown.Markdown(extensions=['extra', 'nl2br'])
+        description_html = md.convert(description) + '\n        '
     
     # Build images
     images_html = ''
@@ -147,10 +147,13 @@ def generate_project_html(project_data, images):
         <h3>Acknowledgment</h3>
         <p>This artwork by Rafael Lozano-Hemmer is the result of the combined efforts of a talented and diverse group of professionals. Each person has contributed unique skills and expertise to the creation of this piece. For more information about the team and their roles, please visit our <a href="https://www.lozano-hemmer.com/" target="_blank" class="url-value">official website</a>.</p>'''
     elif acknowledgment:
+        # Parse acknowledgment as Markdown
+        md = markdown.Markdown(extensions=['extra', 'nl2br'])
+        ack_html = md.convert(acknowledgment)
         acknowledgment_html = f'''
         <hr>
         <h3>Acknowledgment</h3>
-        <p>{acknowledgment}</p>'''
+        {ack_html}'''
     
     return f'''<!DOCTYPE html>
 <html lang="en">

@@ -15,6 +15,8 @@ from PIL import Image
 import re
 import webbrowser
 from threading import Timer
+import markdown
+from markdownify import markdownify as md
 
 # Get project root
 script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -102,33 +104,49 @@ def parse_project_html(html_path):
                         tags = [tag.get_text().strip() for tag in td.select('.tag')]
                         properties['role'] = ', '.join(tags)
             
-            # Extract description
+            # Extract description and convert HTML back to Markdown
             description_elem = soup.select_one('.page-body')
             description = ''
             if description_elem:
-                paragraphs = description_elem.select('p')
-                # Stop at hr (acknowledgment divider)
-                for p in paragraphs:
-                    if p.find_previous_sibling('hr'):
+                # Find all content before the images
+                content_parts = []
+                for child in description_elem.children:
+                    # Stop at images or hr
+                    if child.name in ['hr', 'div']:
                         break
-                    description += p.get_text().strip() + '\n\n'
+                    if child.name == 'p':
+                        # Convert paragraph HTML to Markdown
+                        content_parts.append(md(str(child)).strip())
+                    elif child.name in ['ul', 'ol']:
+                        # Convert lists to Markdown
+                        content_parts.append(md(str(child)).strip())
+                    elif child.name and child.get_text().strip():
+                        # Other block elements
+                        content_parts.append(md(str(child)).strip())
+                
+                description = '\n\n'.join(content_parts) if content_parts else ''
             
-            # Extract acknowledgment - always populate so user can edit
+            # Extract acknowledgment and convert HTML to Markdown - always populate so user can edit
             acknowledgment = ''
             ack_h3 = soup.find('h3', string='Acknowledgment')
             if ack_h3:
                 # Get all content after the h3 until the next hr or end of page-body
-                ack_content = []
+                ack_parts = []
                 for sibling in ack_h3.next_siblings:
                     if sibling.name == 'p':
-                        ack_text = sibling.get_text().strip()
-                        ack_content.append(ack_text)
+                        # Convert paragraph HTML to Markdown
+                        ack_markdown = md(str(sibling)).strip()
+                        ack_parts.append(ack_markdown)
+                    elif sibling.name in ['ul', 'ol']:
+                        # Convert lists to Markdown
+                        ack_markdown = md(str(sibling)).strip()
+                        ack_parts.append(ack_markdown)
                     elif sibling.name in ['h3', 'hr']:
                         break
                 
-                if ack_content:
-                    acknowledgment = '\n\n'.join(ack_content)
-                    print(f"DEBUG: Found acknowledgment: {acknowledgment[:100]}...")
+                if ack_parts:
+                    acknowledgment = '\n\n'.join(ack_parts)
+                    print(f"DEBUG: Found acknowledgment (Markdown): {acknowledgment[:100]}...")
             
             return {
                 'title': title,
@@ -518,11 +536,15 @@ def generate_html(data, images):
                     <td>{role_tags_html}</td>
                 </tr>"""
     
-    # Generate description paragraphs
+    # Generate description HTML from Markdown
     description_html = ''
     if description:
-        paragraphs = [p.strip() for p in description.split('\n\n') if p.strip()]
-        description_html = '\n'.join([f'        <p>{p}</p>' for p in paragraphs])
+        # Parse Markdown to HTML
+        md = markdown.Markdown(extensions=['extra', 'nl2br'])
+        html = md.convert(description)
+        # Indent for template
+        lines = html.split('\n')
+        description_html = '\n'.join([f'        {line}' if line else '' for line in lines])
     
     # Generate images HTML
     images_html = ''
@@ -559,10 +581,15 @@ def generate_html(data, images):
         <h3>Acknowledgment</h3>
         <p>This artwork by Rafael Lozano-Hemmer is the result of the combined efforts of a talented and diverse group of professionals. Each person has contributed unique skills and expertise to the creation of this piece. For more information about the team and their roles, please visit our <a href="https://www.lozano-hemmer.com/" target="_blank" class="url-value">official website</a>.</p>"""
     elif acknowledgment:
+        # Parse Markdown for acknowledgment too
+        md = markdown.Markdown(extensions=['extra', 'nl2br'])
+        ack_html = md.convert(acknowledgment)
+        lines = ack_html.split('\n')
+        ack_content = '\n'.join([f'        {line}' if line else '' for line in lines])
         acknowledgment_html = f"""
         <hr>
         <h3>Acknowledgment</h3>
-        <p>{acknowledgment}</p>"""
+{ack_content}"""
     
     # Generate full HTML
     html = f"""<!DOCTYPE html>
