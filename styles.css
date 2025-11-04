@@ -269,7 +269,7 @@ body {
 }
 
 .project-info {
-    padding: 0;
+    padding: 0 0 var(--spacing-sm) var(--spacing-sm);
 }
 
 .project-title {
