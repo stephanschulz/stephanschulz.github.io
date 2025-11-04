@@ -6,86 +6,160 @@
     <title>33 Questions per Minute, online, 2021 - Stephan Schulz</title>
     <link rel="stylesheet" href="../styles.css">
     <style>
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--text-secondary);
-            text-decoration: none;
+        .breadcrumb {
             font-size: 14px;
+            color: var(--text-secondary);
             margin-bottom: 24px;
-            transition: color 0.2s ease;
         }
-        .back-link:hover {
-            color: var(--text-primary);
-        }
-        .project-header {
-            margin-bottom: 32px;
-        }
-        .project-meta {
-            display: flex;
-            gap: 16px;
-            font-size: 14px;
+        .breadcrumb a {
             color: var(--text-secondary);
-            margin-top: 8px;
-        }
-        .project-image-large {
-            width: 100%;
-            border-radius: 6px;
-            margin-bottom: 32px;
-        }
-        .external-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px 24px;
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            color: var(--text-primary);
             text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
-            transition: all 0.2s ease;
         }
-        .external-link:hover {
-            background: var(--bg-hover);
-            transform: translateY(-1px);
+        .breadcrumb a:hover {
+            color: var(--text-primary);
+        }
+        .properties {
+            width: 100%;
+            margin: 24px 0 32px 0;
+            font-size: 14px;
+            border: none;
+        }
+        .property-row {
+            border-bottom: 1px solid var(--border-color);
+        }
+        .property-row th {
+            padding: 12px 0;
+            font-weight: 400;
+            color: var(--text-secondary);
+            width: 30%;
+            vertical-align: top;
+            text-align: left;
+        }
+        .property-row td {
+            padding: 12px 0;
+            color: var(--text-primary);
+        }
+        .icon {
+            margin-right: 8px;
+            opacity: 0.6;
+        }
+        .url-value {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        .url-value:hover {
+            text-decoration: underline;
+        }
+        .tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            font-size: 12px;
+            margin-right: 8px;
+            border: 1px solid var(--border-color);
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 32px 0;
+        }
+        .image-column img,
+        .image-full img {
+            width: 100%;
+            border-radius: 3px;
+            display: block;
+        }
+        .image-full {
+            margin: 32px 0;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid var(--border-color);
+            margin: 48px 0 24px 0;
+        }
+        h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 24px 0 16px 0;
+        }
+        p {
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+        @media (max-width: 768px) {
+            .image-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <main class="container">
-        <a href="../index.html" class="back-link">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-                <path d="M8.5 1.5l-7 7 7 7V10h6.5V6H8.5V1.5z"/>
-            </svg>
-            Back to Projects
-        </a>
-
-        <div class="project-header">
-            <h1 class="page-title">33 Questions per Minute, online, 2021</h1>
-            <div class="project-meta">
-                <span>Year: 2021</span>
-                <span>•</span>
-                <span>Rafael Lozano-Hemmer</span>
-                <span>•</span><span>Role: Java Script</span>
-            </div>
+        <div class="breadcrumb">
+            <a href="../index.html">Stephan Schulz</a> / 
+            <a href="../index.html">Projects and Artworks</a> / 
+            33 Questions per Minute, online, 2021
         </div>
 
-        <img src="../assets/projects/33-questions-per-minute.png" alt="33 Questions per Minute, online, 2021" class="project-image-large" onerror="this.style.display='none'">
+        <header>
+            <h1 class="page-title">33 Questions per Minute, online, 2021</h1>
+            
+        <table class="properties">
+            <tbody>
+                <tr class="property-row">
+                    <th>
+                        <span class="icon">👤</span>
+                        for
+                    </th>
+                    <td>Rafael Lozano-Hemmer</td>
+                </tr>
+                <tr class="property-row">
+                    <th>
+                        <span class="icon">#</span>
+                        Year
+                    </th>
+                    <td>2021</td>
+                </tr>
+                <tr class="property-row">
+                    <th>
+                        <span class="icon">🔗</span>
+                        Official Site
+                    </th>
+                    <td><a href="https://33-questions.glitch.me/" target="_blank" class="url-value">https://33-questions.glitch.me/</a></td>
+                </tr>
+                <tr class="property-row">
+                    <th>
+                        <span class="icon">📋</span>
+                        I did
+                    </th>
+                    <td><span class="tag">Java Script</span></td>
+                </tr>
+            </tbody>
+        </table>
+        </header>
 
-        <a href="https://33-questions.glitch.me/" target="_blank" class="external-link">
-            View Official Project Page
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-                <path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2zm6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1z"/>
-            </svg>
-        </a>
-
-        <div style="margin-top: 48px;">
-            <p style="color: var(--text-secondary); font-size: 14px;">
-                More details and documentation coming soon.
-            </p>
+        <div class="page-body">
+            
+        <div class="image-grid">
+            <div class="image-column">
+                <img src="../assets/project-images/33-questions-per-minute-online-2021/Screen_Shot_2022-02-13_at_2.14.59_PM.png" alt="33 Questions per Minute, online, 2021" loading="lazy">
+            </div>
+            <div class="image-column">
+                <img src="../assets/project-images/33-questions-per-minute-online-2021/Screen_Shot_2022-02-13_at_2.14.47_PM.png" alt="33 Questions per Minute, online, 2021" loading="lazy">
+            </div>
+        </div>
+        <div class="image-full">
+            <img src="../assets/project-images/33-questions-per-minute-online-2021/Screen_Shot_2022-02-13_at_2.14.50_PM.png" alt="33 Questions per Minute, online, 2021" loading="lazy">
+        </div>
+        <div class="image-full">
+            <img src="../assets/project-images/33-questions-per-minute-online-2021/Feb-16-2022_13-18-26.gif" alt="33 Questions per Minute, online, 2021" loading="lazy">
+        </div>
+            
+            
+            
+            
         </div>
     </main>
 </body>

@@ -6,81 +6,175 @@
     <title>Drumline, 2007 - Stephan Schulz</title>
     <link rel="stylesheet" href="../styles.css">
     <style>
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--text-secondary);
-            text-decoration: none;
+        .breadcrumb {
             font-size: 14px;
+            color: var(--text-secondary);
             margin-bottom: 24px;
-            transition: color 0.2s ease;
         }
-        .back-link:hover {
-            color: var(--text-primary);
-        }
-        .project-header {
-            margin-bottom: 32px;
-        }
-        .project-meta {
-            display: flex;
-            gap: 16px;
-            font-size: 14px;
+        .breadcrumb a {
             color: var(--text-secondary);
-            margin-top: 8px;
-        }
-        .project-image-large {
-            width: 100%;
-            border-radius: 6px;
-            margin-bottom: 32px;
-        }
-        .external-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px 24px;
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            color: var(--text-primary);
             text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
-            transition: all 0.2s ease;
         }
-        .external-link:hover {
-            background: var(--bg-hover);
-            transform: translateY(-1px);
+        .breadcrumb a:hover {
+            color: var(--text-primary);
+        }
+        .properties {
+            width: 100%;
+            margin: 24px 0 32px 0;
+            font-size: 14px;
+            border: none;
+        }
+        .property-row {
+            border-bottom: 1px solid var(--border-color);
+        }
+        .property-row th {
+            padding: 12px 0;
+            font-weight: 400;
+            color: var(--text-secondary);
+            width: 30%;
+            vertical-align: top;
+            text-align: left;
+        }
+        .property-row td {
+            padding: 12px 0;
+            color: var(--text-primary);
+        }
+        .icon {
+            margin-right: 8px;
+            opacity: 0.6;
+        }
+        .url-value {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        .url-value:hover {
+            text-decoration: underline;
+        }
+        .tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            font-size: 12px;
+            margin-right: 8px;
+            border: 1px solid var(--border-color);
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 32px 0;
+        }
+        .image-column img,
+        .image-full img {
+            width: 100%;
+            border-radius: 3px;
+            display: block;
+        }
+        .image-full {
+            margin: 32px 0;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid var(--border-color);
+            margin: 48px 0 24px 0;
+        }
+        h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 24px 0 16px 0;
+        }
+        p {
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+        @media (max-width: 768px) {
+            .image-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <main class="container">
-        <a href="../index.html" class="back-link">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-                <path d="M8.5 1.5l-7 7 7 7V10h6.5V6H8.5V1.5z"/>
-            </svg>
-            Back to Projects
-        </a>
-
-        <div class="project-header">
-            <h1 class="page-title">Drumline, 2007</h1>
-            <div class="project-meta">
-                <span>Year: 2007</span>
-                <span>•</span>
-                <span>Stephan Schulz</span>
-                
-            </div>
+        <div class="breadcrumb">
+            <a href="../index.html">Stephan Schulz</a> / 
+            <a href="../index.html">Projects and Artworks</a> / 
+            Drumline, 2007
         </div>
 
-        <img src="../assets/projects/drumline.jpg" alt="Drumline, 2007" class="project-image-large" onerror="this.style.display='none'">
+        <header>
+            <h1 class="page-title">Drumline, 2007</h1>
+            
+        <table class="properties">
+            <tbody>
+                <tr class="property-row">
+                    <th>
+                        <span class="icon">👤</span>
+                        for
+                    </th>
+                    <td>Stephan Schulz</td>
+                </tr>
+                <tr class="property-row">
+                    <th>
+                        <span class="icon">#</span>
+                        Year
+                    </th>
+                    <td>2007</td>
+                </tr>
+                <tr class="property-row">
+                    <th>
+                        <span class="icon">📋</span>
+                        I did
+                    </th>
+                    <td><span class="tag"></span></td>
+                </tr>
+            </tbody>
+        </table>
+        </header>
 
+        <div class="page-body">
+            
+        <div class="image-grid">
+            <div class="image-column">
+                <img src="../assets/project-images/drumline-2007/digger.jpg" alt="Drumline, 2007" loading="lazy">
+            </div>
+            <div class="image-column">
+                <img src="../assets/project-images/drumline-2007/silhouette.jpg" alt="Drumline, 2007" loading="lazy">
+            </div>
+        </div>
+        <div class="image-full">
+            <img src="../assets/project-images/drumline-2007/threeFlags.jpg" alt="Drumline, 2007" loading="lazy">
+        </div>
+        <div class="image-full">
+            <img src="../assets/project-images/drumline-2007/threeBack.jpg" alt="Drumline, 2007" loading="lazy">
+        </div>
+        <div class="image-full">
+            <img src="../assets/project-images/drumline-2007/truck.jpg" alt="Drumline, 2007" loading="lazy">
+        </div>
+        <div class="image-full">
+            <img src="../assets/project-images/drumline-2007/3drums.jpg" alt="Drumline, 2007" loading="lazy">
+        </div>
+            
+            <p>https://vimeo.com/5190834</p>
+        <p>https://www.youtube.com/embed/6TOti7Zh3m0</p>
+        <p>Drumline is an outdoor, sculptural intervention using electronic media to activate three identical snare drums in tandem with the flow of traffic. The shiny chrome snare drums are hung from already existing flag pole holders on a building's facade. Each drum is equipped with a motorized drum stick. Three rubber hoses associated with each drum are laid out across the street and its sidewalk, perpendicular to the stream of traffic.</p>
+        <p>By stepping or driving across a hose the inside pressure changes. A pressure sensor converts this tactile input into an electrical signal and triggers the corresponding snare drum to receive a hit from the drumstick.</p>
+        <p>Pedestrians and car drivers involuntarily take part in the creation of an outdoor drum rhythm. This rhythm is a direct translation of the movements taking place on the street. I am using the same technology and techniques that city planners use to keep track of the city’s usage and performance.</p>
+        <p>Each car’s axis triggers one strike on the drum. The awareness of the continuous stream of traffic is segmented into discrete units. Traffic planners quantify continuous data into discrete units for knowledge discovery. This type of sampling and quantification of human behavior is common practice for almost any business in order to turn a seemingly continuous mass into a readable form. Greater understanding and control of human behavior is mostly used for economic gain.</p>
+        <p>I want to underline the act of quantification, the act of counting that’s why after the passing of 99 cars the drums automatically start playing short military drum patterns. A computer is feeding the drums during this time with pre-assembled patterns, just long enough to make passersby question the origin of these patterns. Did the traffic going by create the drumming? Did I?</p>
+        <p>This moment of uncertainty is what I am hoping for, uncertainty creates possibility – possibility to see and hear beyond the constant stream of traffic and sensory information.</p>
+        <p>Part of what disempowers the “masses“ is being segmented into individual bits of data that can be categorized. The next step after knowledge discovery - in the data-mining process - is behavior prediction that is then used to target opportunities, to influence.</p>
+        <p>Something strange happens when people are stuck into multiple categories. Looking from the outside in, one could think that individuality is maintained or even nourished. But instead the mass of people becomes more malleable, because it becomes easier to predict which themes or products influence our behavior, based on our categorization.</p>
+        <p>I find this understanding of a mass that consists of quantifiable units very worrisome. It reminds me of Taylorism that allowed for greater productivity by analyzing workers and encouraging single task events. As well as creating alienated labour it also allows for easy replacement and the devaluing of the individual.</p>
+        <p>For me, it is more important for individuals to have a personal impact on their surroundings.</p>
+        <p>Paradoxically, part of my artistic practice also relies on controlling every single unit. For this work, I implement custom made software that I program with scripting languages like Proce55ing in connection with a micro-controller called wiring i/o board.</p>
+        <p>Working with these new media tools requires submission to a particular logic and restrained syntax. In this world of modularity and variability everything can be modified at any time, automation of any operation is possible. Every element is categorized and labeled.</p>
+        <p>But I am data-mining to make power problematic rather then to gain power through excessive collection and manipulation of information.</p>
+        <p>Drumline happens in a public space where people are isolated from each other by the metal cages of their cars or by the noise created by those cars. Nevertheless outdoor public spaces hold the potential for engaging with a wider range of people and a wider range of opinions. It is necessary to allow for such spaces and such possibilities to exist especially in our technology driven culture. Technology seems to promote a culture of isolation, a culture in which we increasingly speak only to the like minded. But in a public space we have the possibility to test some of our opinions and see and hear others react to them.</p>
         
-
-        <div style="margin-top: 48px;">
-            <p style="color: var(--text-secondary); font-size: 14px;">
-                More details and documentation coming soon.
-            </p>
+            
+            
         </div>
     </main>
 </body>

@@ -6,81 +6,163 @@
     <title>Equally Distant From Both Sides, 2006 - Stephan Schulz</title>
     <link rel="stylesheet" href="../styles.css">
     <style>
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--text-secondary);
-            text-decoration: none;
+        .breadcrumb {
             font-size: 14px;
+            color: var(--text-secondary);
             margin-bottom: 24px;
-            transition: color 0.2s ease;
         }
-        .back-link:hover {
-            color: var(--text-primary);
-        }
-        .project-header {
-            margin-bottom: 32px;
-        }
-        .project-meta {
-            display: flex;
-            gap: 16px;
-            font-size: 14px;
+        .breadcrumb a {
             color: var(--text-secondary);
-            margin-top: 8px;
-        }
-        .project-image-large {
-            width: 100%;
-            border-radius: 6px;
-            margin-bottom: 32px;
-        }
-        .external-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px 24px;
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            color: var(--text-primary);
             text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
-            transition: all 0.2s ease;
         }
-        .external-link:hover {
-            background: var(--bg-hover);
-            transform: translateY(-1px);
+        .breadcrumb a:hover {
+            color: var(--text-primary);
+        }
+        .properties {
+            width: 100%;
+            margin: 24px 0 32px 0;
+            font-size: 14px;
+            border: none;
+        }
+        .property-row {
+            border-bottom: 1px solid var(--border-color);
+        }
+        .property-row th {
+            padding: 12px 0;
+            font-weight: 400;
+            color: var(--text-secondary);
+            width: 30%;
+            vertical-align: top;
+            text-align: left;
+        }
+        .property-row td {
+            padding: 12px 0;
+            color: var(--text-primary);
+        }
+        .icon {
+            margin-right: 8px;
+            opacity: 0.6;
+        }
+        .url-value {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        .url-value:hover {
+            text-decoration: underline;
+        }
+        .tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            font-size: 12px;
+            margin-right: 8px;
+            border: 1px solid var(--border-color);
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 32px 0;
+        }
+        .image-column img,
+        .image-full img {
+            width: 100%;
+            border-radius: 3px;
+            display: block;
+        }
+        .image-full {
+            margin: 32px 0;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid var(--border-color);
+            margin: 48px 0 24px 0;
+        }
+        h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 24px 0 16px 0;
+        }
+        p {
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+        @media (max-width: 768px) {
+            .image-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <main class="container">
-        <a href="../index.html" class="back-link">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-                <path d="M8.5 1.5l-7 7 7 7V10h6.5V6H8.5V1.5z"/>
-            </svg>
-            Back to Projects
-        </a>
-
-        <div class="project-header">
-            <h1 class="page-title">Equally Distant From Both Sides, 2006</h1>
-            <div class="project-meta">
-                <span>Year: 2006</span>
-                <span>•</span>
-                <span>Stephan Schulz</span>
-                <span>•</span><span>Role: Performance</span>
-            </div>
+        <div class="breadcrumb">
+            <a href="../index.html">Stephan Schulz</a> / 
+            <a href="../index.html">Projects and Artworks</a> / 
+            Equally Distant From Both Sides, 2006
         </div>
 
-        <img src="../assets/projects/equally-distant-from-both-sides.jpg" alt="Equally Distant From Both Sides, 2006" class="project-image-large" onerror="this.style.display='none'">
+        <header>
+            <h1 class="page-title">Equally Distant From Both Sides, 2006</h1>
+            
+        <table class="properties">
+            <tbody>
+                <tr class="property-row">
+                    <th>
+                        <span class="icon">👤</span>
+                        for
+                    </th>
+                    <td>Stephan Schulz</td>
+                </tr>
+                <tr class="property-row">
+                    <th>
+                        <span class="icon">#</span>
+                        Year
+                    </th>
+                    <td>2006</td>
+                </tr>
+                <tr class="property-row">
+                    <th>
+                        <span class="icon">📋</span>
+                        I did
+                    </th>
+                    <td><span class="tag">Performance</span></td>
+                </tr>
+            </tbody>
+        </table>
+        </header>
 
+        <div class="page-body">
+            
+        <div class="image-grid">
+            <div class="image-column">
+                <img src="../assets/project-images/equally-distant-from-both-sides-2006/helmet02.jpg" alt="Equally Distant From Both Sides, 2006" loading="lazy">
+            </div>
+            <div class="image-column">
+                <img src="../assets/project-images/equally-distant-from-both-sides-2006/helmet03.jpg" alt="Equally Distant From Both Sides, 2006" loading="lazy">
+            </div>
+        </div>
+        <div class="image-full">
+            <img src="../assets/project-images/equally-distant-from-both-sides-2006/helmet01.jpg" alt="Equally Distant From Both Sides, 2006" loading="lazy">
+        </div>
+            
+            <p>https://www.youtube.com/watch?v=kXmTXy301Rc</p>
+        <p>content: 'Equally distant from both sides' is a walking performance in a city's streets. I am wearing a 3 piece business suit and a hard hat that has an 8-foot plank of wood attached. On each end of the plank a miniDV video camera is mounted and pointed at me. Both cameras are filming me while I am walking determinedly through the streets.</p>
+        <p>(update: I am currently seeking support to take advantage of cell phone’s capability to stream live video on to a web server. This would allow me to replace the two video camera with two video+GPS enabled cell phones.)</p>
+        <p>I appear to be 'on the job'. The curious nature of my appearance and the impossibility to solidly place my doing attracts passersby's attention. In a very serious manner I explain that I am working, that my job is self-chosen and my job's purpose is to engage in conversation with stranger. I explain how the involved technology is helping me to make my appearance seem purpose full and directed but also counteract logical placement in any commonly known trade.</p>
+        <p>I use this 'body extension' as a catalyst, which helps me to start conversations with strangers. After revealing some information about myself I begin to ask question about the stranger's occupation. I try to keep the conversation alive as long as possible and even a bit longer until we both exhausted the subjects we are willing to share with each other.</p>
+        <p>I use the recorded video in a video compilation of each performance. At the gallery the visitor can see the two videos side by side.</p>
+        <p>construction worker http://www.youtube.com/watch?v=obLYS9t-Ytg</p>
+        <p>students http://www.youtube.com/watch?v=0h1Fnq5ktKc</p>
+        <p>7to4 http://www.youtube.com/watch?v=exifWSx3Rjk</p>
+        <p>under writer http://www.youtube.com/watch?v=_qjwWJ00iM0</p>
+        <p>posing http://www.youtube.com/watch?v=BKk0uen60KM</p>
+        <p>depending http://www.youtube.com/watch?v=5XvlTtzWeSo</p>
+        <p>copy writer http://www.youtube.com/watch?v=ZZaIhZcq-9o</p>
         
-
-        <div style="margin-top: 48px;">
-            <p style="color: var(--text-secondary); font-size: 14px;">
-                More details and documentation coming soon.
-            </p>
+            
+            
         </div>
     </main>
 </body>

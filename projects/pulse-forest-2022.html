@@ -6,81 +6,142 @@
     <title>Pulse Forest, 2022 - Stephan Schulz</title>
     <link rel="stylesheet" href="../styles.css">
     <style>
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--text-secondary);
-            text-decoration: none;
+        .breadcrumb {
             font-size: 14px;
+            color: var(--text-secondary);
             margin-bottom: 24px;
-            transition: color 0.2s ease;
         }
-        .back-link:hover {
-            color: var(--text-primary);
-        }
-        .project-header {
-            margin-bottom: 32px;
-        }
-        .project-meta {
-            display: flex;
-            gap: 16px;
-            font-size: 14px;
+        .breadcrumb a {
             color: var(--text-secondary);
-            margin-top: 8px;
-        }
-        .project-image-large {
-            width: 100%;
-            border-radius: 6px;
-            margin-bottom: 32px;
-        }
-        .external-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px 24px;
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            color: var(--text-primary);
             text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
-            transition: all 0.2s ease;
         }
-        .external-link:hover {
-            background: var(--bg-hover);
-            transform: translateY(-1px);
+        .breadcrumb a:hover {
+            color: var(--text-primary);
+        }
+        .properties {
+            width: 100%;
+            margin: 24px 0 32px 0;
+            font-size: 14px;
+            border: none;
+        }
+        .property-row {
+            border-bottom: 1px solid var(--border-color);
+        }
+        .property-row th {
+            padding: 12px 0;
+            font-weight: 400;
+            color: var(--text-secondary);
+            width: 30%;
+            vertical-align: top;
+            text-align: left;
+        }
+        .property-row td {
+            padding: 12px 0;
+            color: var(--text-primary);
+        }
+        .icon {
+            margin-right: 8px;
+            opacity: 0.6;
+        }
+        .url-value {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        .url-value:hover {
+            text-decoration: underline;
+        }
+        .tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            font-size: 12px;
+            margin-right: 8px;
+            border: 1px solid var(--border-color);
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 32px 0;
+        }
+        .image-column img,
+        .image-full img {
+            width: 100%;
+            border-radius: 3px;
+            display: block;
+        }
+        .image-full {
+            margin: 32px 0;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid var(--border-color);
+            margin: 48px 0 24px 0;
+        }
+        h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 24px 0 16px 0;
+        }
+        p {
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+        @media (max-width: 768px) {
+            .image-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <main class="container">
-        <a href="../index.html" class="back-link">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-                <path d="M8.5 1.5l-7 7 7 7V10h6.5V6H8.5V1.5z"/>
-            </svg>
-            Back to Projects
-        </a>
-
-        <div class="project-header">
-            <h1 class="page-title">Pulse Forest, 2022</h1>
-            <div class="project-meta">
-                <span>Year: 2022</span>
-                <span>•</span>
-                <span>Rafael Lozano-Hemmer</span>
-                <span>•</span><span>Role: Hardware, Software</span>
-            </div>
+        <div class="breadcrumb">
+            <a href="../index.html">Stephan Schulz</a> / 
+            <a href="../index.html">Projects and Artworks</a> / 
+            Pulse Forest, 2022
         </div>
 
-        <img src="../assets/projects/pulse-forest.jpg" alt="Pulse Forest, 2022" class="project-image-large" onerror="this.style.display='none'">
+        <header>
+            <h1 class="page-title">Pulse Forest, 2022</h1>
+            
+        <table class="properties">
+            <tbody>
+                <tr class="property-row">
+                    <th>
+                        <span class="icon">👤</span>
+                        for
+                    </th>
+                    <td>Rafael Lozano-Hemmer</td>
+                </tr>
+                <tr class="property-row">
+                    <th>
+                        <span class="icon">#</span>
+                        Year
+                    </th>
+                    <td>2022</td>
+                </tr>
+                <tr class="property-row">
+                    <th>
+                        <span class="icon">📋</span>
+                        I did
+                    </th>
+                    <td><span class="tag">Hardware</span><span class="tag">Software</span></td>
+                </tr>
+            </tbody>
+        </table>
+        </header>
 
+        <div class="page-body">
+            
+            
+            <p>“Pulse Forest” is one of eight interactive installations now on view at the Crystal Bridges Museum of Art in Bentonville, Arkansas. The piece features 3,000 LED-filament lightbulbs controlled by the heartbeats of up to 3 simultaneous participants who place their hands under computer vision sensors.</p>
+        <p>The project was programmed by the great Stephan Schulz and the team that made this possible include Emily Green, Gabriel Rizzotti, Luis Morales, Steven Hoffart, William Sutton, Leigh Kotsilidis, Orion Szydel, Alison Hedley and many other incredible people at my studio, at the Museum, and at Ozark Productions. Particular shout-out to Benoit Soucy and Ben Huss who made it all happen. Video is by Olivier Groulx.</p>
+        <p>“Listening Forest” is almost a retrospective of Rafael’s outdoor artworks, but all the pieces were adapted specifically for Crystal Bridges, including a couple of premieres. The show is tied together by new music by Robin Rimbaud Scanner, is on every night (except Monday and Tuesday) from dusk onwards, and it involves a 1.5 mile (2.4 Km) walk along the North Forest trail, which is a park adjacent to the Museum. The show was installed with flora and fauna impact mitigation plans, for example our computers are connected to Cornell’s birdcast migration system to automatically lower light intensity as flocks fly by. The show is fully accessible but we are also offering “relaxed sessions” with lower volumes, mobility shuttles, and other adaptations to cater to more sensitive visitors.</p>
         
-
-        <div style="margin-top: 48px;">
-            <p style="color: var(--text-secondary); font-size: 14px;">
-                More details and documentation coming soon.
-            </p>
+            
+            
         </div>
     </main>
 </body>

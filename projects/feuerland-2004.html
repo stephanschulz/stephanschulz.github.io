@@ -6,81 +6,179 @@
     <title>Feuerland, 2004 - Stephan Schulz</title>
     <link rel="stylesheet" href="../styles.css">
     <style>
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--text-secondary);
-            text-decoration: none;
+        .breadcrumb {
             font-size: 14px;
+            color: var(--text-secondary);
             margin-bottom: 24px;
-            transition: color 0.2s ease;
         }
-        .back-link:hover {
-            color: var(--text-primary);
-        }
-        .project-header {
-            margin-bottom: 32px;
-        }
-        .project-meta {
-            display: flex;
-            gap: 16px;
-            font-size: 14px;
+        .breadcrumb a {
             color: var(--text-secondary);
-            margin-top: 8px;
-        }
-        .project-image-large {
-            width: 100%;
-            border-radius: 6px;
-            margin-bottom: 32px;
-        }
-        .external-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px 24px;
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            color: var(--text-primary);
             text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
-            transition: all 0.2s ease;
         }
-        .external-link:hover {
-            background: var(--bg-hover);
-            transform: translateY(-1px);
+        .breadcrumb a:hover {
+            color: var(--text-primary);
+        }
+        .properties {
+            width: 100%;
+            margin: 24px 0 32px 0;
+            font-size: 14px;
+            border: none;
+        }
+        .property-row {
+            border-bottom: 1px solid var(--border-color);
+        }
+        .property-row th {
+            padding: 12px 0;
+            font-weight: 400;
+            color: var(--text-secondary);
+            width: 30%;
+            vertical-align: top;
+            text-align: left;
+        }
+        .property-row td {
+            padding: 12px 0;
+            color: var(--text-primary);
+        }
+        .icon {
+            margin-right: 8px;
+            opacity: 0.6;
+        }
+        .url-value {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        .url-value:hover {
+            text-decoration: underline;
+        }
+        .tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            font-size: 12px;
+            margin-right: 8px;
+            border: 1px solid var(--border-color);
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 32px 0;
+        }
+        .image-column img,
+        .image-full img {
+            width: 100%;
+            border-radius: 3px;
+            display: block;
+        }
+        .image-full {
+            margin: 32px 0;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid var(--border-color);
+            margin: 48px 0 24px 0;
+        }
+        h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 24px 0 16px 0;
+        }
+        p {
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+        @media (max-width: 768px) {
+            .image-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <main class="container">
-        <a href="../index.html" class="back-link">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-                <path d="M8.5 1.5l-7 7 7 7V10h6.5V6H8.5V1.5z"/>
-            </svg>
-            Back to Projects
-        </a>
-
-        <div class="project-header">
-            <h1 class="page-title">Feuerland, 2004</h1>
-            <div class="project-meta">
-                <span>Year: 2004</span>
-                <span>•</span>
-                <span>Sven Knauth, Stephan Schulz</span>
-                <span>•</span><span>Role: Animation</span>
-            </div>
+        <div class="breadcrumb">
+            <a href="../index.html">Stephan Schulz</a> / 
+            <a href="../index.html">Projects and Artworks</a> / 
+            Feuerland, 2004
         </div>
 
-        <img src="../assets/projects/feuerland.jpg" alt="Feuerland, 2004" class="project-image-large" onerror="this.style.display='none'">
+        <header>
+            <h1 class="page-title">Feuerland, 2004</h1>
+            
+        <table class="properties">
+            <tbody>
+                <tr class="property-row">
+                    <th>
+                        <span class="icon">👤</span>
+                        for
+                    </th>
+                    <td>Sven Knauth, Stephan Schulz</td>
+                </tr>
+                <tr class="property-row">
+                    <th>
+                        <span class="icon">#</span>
+                        Year
+                    </th>
+                    <td>2004</td>
+                </tr>
+                <tr class="property-row">
+                    <th>
+                        <span class="icon">📋</span>
+                        I did
+                    </th>
+                    <td><span class="tag">Animation</span></td>
+                </tr>
+            </tbody>
+        </table>
+        </header>
 
+        <div class="page-body">
+            
+        <div class="image-grid">
+            <div class="image-column">
+                <img src="../assets/project-images/feuerland-2004/feuer01.jpg" alt="Feuerland, 2004" loading="lazy">
+            </div>
+            <div class="image-column">
+                <img src="../assets/project-images/feuerland-2004/feuer03.jpg" alt="Feuerland, 2004" loading="lazy">
+            </div>
+        </div>
+        <div class="image-full">
+            <img src="../assets/project-images/feuerland-2004/feuer02.jpg" alt="Feuerland, 2004" loading="lazy">
+        </div>
+        <div class="image-full">
+            <img src="../assets/project-images/feuerland-2004/feuer04.jpg" alt="Feuerland, 2004" loading="lazy">
+        </div>
+        <div class="image-full">
+            <img src="../assets/project-images/feuerland-2004/WhatsApp_Image_2023-09-19_at_16.05.57_(3).jpeg" alt="Feuerland, 2004" loading="lazy">
+        </div>
+        <div class="image-full">
+            <img src="../assets/project-images/feuerland-2004/WhatsApp_Image_2023-09-19_at_15.43.49_(2).jpeg" alt="Feuerland, 2004" loading="lazy">
+        </div>
+        <div class="image-full">
+            <img src="../assets/project-images/feuerland-2004/WhatsApp_Image_2023-09-19_at_15.43.49_(1).jpeg" alt="Feuerland, 2004" loading="lazy">
+        </div>
+        <div class="image-full">
+            <img src="../assets/project-images/feuerland-2004/WhatsApp_Image_2023-09-19_at_16.05.57_(2).jpeg" alt="Feuerland, 2004" loading="lazy">
+        </div>
+        <div class="image-full">
+            <img src="../assets/project-images/feuerland-2004/WhatsApp_Image_2023-09-19_at_15.43.49.jpeg" alt="Feuerland, 2004" loading="lazy">
+        </div>
+            
+            <p>https://youtu.be/t5LrGdjrcxM</p>
+        <p>a cut out animation by sven knauth & stephan schulz</p>
+        <p>original title: Feuerlandenglish title: not far away</p>
+        <p>media: cut out animation, on miniDV or DVD</p>
+        <p>year of production: 2004</p>
+        <p>country of production: Germany, Berlin</p>
+        <p>language: german singing</p>
+        <p>running time: 4:00 min</p>
+        <p>synopsis:A man is going in the cellar to get some coal, it got cold. An everyday activity becomes a journey into a 'region, not far away' from home but tinted by the cellars light. In this light, normal objects are brought to life and start having character, the otherwise plain surrounding become a vivid landscape. In this 'region, not far away' the man finds his place of choice for retreat and relaxation, a holiday.</p>
+        <p>In the soundtrack a person tell us how he would like to be like everyone else, that is "... shopping with rings around your eyes and cling to things that aren't good." But he thinks, he maybe should just stay put for a while and see if much will change at all.</p>
+        <p>technique:This animation used the classical technique of cut out animation. We placed the actor into different sceneries and took about seven digital photos for one phase. This way we segmented the whole figure and were able to later animated its different but limited parts. For the background we took even more digital photos. All those digital photos were send of via the internet to be developed onto paper. We clued those paper photos together on an animation table and animated them. Again we used a digital photo camera to capture every single frame. The single final pictures were processed and edited with the computer.</p>
         
-
-        <div style="margin-top: 48px;">
-            <p style="color: var(--text-secondary); font-size: 14px;">
-                More details and documentation coming soon.
-            </p>
+            
+            
         </div>
     </main>
 </body>

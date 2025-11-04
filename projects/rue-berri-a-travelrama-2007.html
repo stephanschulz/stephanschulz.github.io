@@ -6,81 +6,188 @@
     <title>Rue Berri (a Travelrama), 2007 - Stephan Schulz</title>
     <link rel="stylesheet" href="../styles.css">
     <style>
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--text-secondary);
-            text-decoration: none;
+        .breadcrumb {
             font-size: 14px;
+            color: var(--text-secondary);
             margin-bottom: 24px;
-            transition: color 0.2s ease;
         }
-        .back-link:hover {
-            color: var(--text-primary);
-        }
-        .project-header {
-            margin-bottom: 32px;
-        }
-        .project-meta {
-            display: flex;
-            gap: 16px;
-            font-size: 14px;
+        .breadcrumb a {
             color: var(--text-secondary);
-            margin-top: 8px;
-        }
-        .project-image-large {
-            width: 100%;
-            border-radius: 6px;
-            margin-bottom: 32px;
-        }
-        .external-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px 24px;
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            color: var(--text-primary);
             text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
-            transition: all 0.2s ease;
         }
-        .external-link:hover {
-            background: var(--bg-hover);
-            transform: translateY(-1px);
+        .breadcrumb a:hover {
+            color: var(--text-primary);
+        }
+        .properties {
+            width: 100%;
+            margin: 24px 0 32px 0;
+            font-size: 14px;
+            border: none;
+        }
+        .property-row {
+            border-bottom: 1px solid var(--border-color);
+        }
+        .property-row th {
+            padding: 12px 0;
+            font-weight: 400;
+            color: var(--text-secondary);
+            width: 30%;
+            vertical-align: top;
+            text-align: left;
+        }
+        .property-row td {
+            padding: 12px 0;
+            color: var(--text-primary);
+        }
+        .icon {
+            margin-right: 8px;
+            opacity: 0.6;
+        }
+        .url-value {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        .url-value:hover {
+            text-decoration: underline;
+        }
+        .tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            font-size: 12px;
+            margin-right: 8px;
+            border: 1px solid var(--border-color);
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 32px 0;
+        }
+        .image-column img,
+        .image-full img {
+            width: 100%;
+            border-radius: 3px;
+            display: block;
+        }
+        .image-full {
+            margin: 32px 0;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid var(--border-color);
+            margin: 48px 0 24px 0;
+        }
+        h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 24px 0 16px 0;
+        }
+        p {
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+        @media (max-width: 768px) {
+            .image-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <main class="container">
-        <a href="../index.html" class="back-link">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-                <path d="M8.5 1.5l-7 7 7 7V10h6.5V6H8.5V1.5z"/>
-            </svg>
-            Back to Projects
-        </a>
-
-        <div class="project-header">
-            <h1 class="page-title">Rue Berri (a Travelrama), 2007</h1>
-            <div class="project-meta">
-                <span>Year: 2007</span>
-                <span>•</span>
-                <span>Stephan Schulz</span>
-                <span>•</span><span>Role: Performance, Software</span>
-            </div>
+        <div class="breadcrumb">
+            <a href="../index.html">Stephan Schulz</a> / 
+            <a href="../index.html">Projects and Artworks</a> / 
+            Rue Berri (a Travelrama), 2007
         </div>
 
-        <img src="../assets/projects/rue-berri-a-travelrama.jpg" alt="Rue Berri (a Travelrama), 2007" class="project-image-large" onerror="this.style.display='none'">
+        <header>
+            <h1 class="page-title">Rue Berri (a Travelrama), 2007</h1>
+            
+        <table class="properties">
+            <tbody>
+                <tr class="property-row">
+                    <th>
+                        <span class="icon">👤</span>
+                        for
+                    </th>
+                    <td>Stephan Schulz</td>
+                </tr>
+                <tr class="property-row">
+                    <th>
+                        <span class="icon">#</span>
+                        Year
+                    </th>
+                    <td>2007</td>
+                </tr>
+                <tr class="property-row">
+                    <th>
+                        <span class="icon">📋</span>
+                        I did
+                    </th>
+                    <td><span class="tag">Performance</span><span class="tag">Software</span></td>
+                </tr>
+            </tbody>
+        </table>
+        </header>
 
+        <div class="page-body">
+            
+        <div class="image-grid">
+            <div class="image-column">
+                <img src="../assets/project-images/rue-berri-a-travelrama-2007/turn-around.jpg" alt="Rue Berri (a Travelrama), 2007" loading="lazy">
+            </div>
+            <div class="image-column">
+                <img src="../assets/project-images/rue-berri-a-travelrama-2007/gallery-one.jpg" alt="Rue Berri (a Travelrama), 2007" loading="lazy">
+            </div>
+        </div>
+        <div class="image-full">
+            <img src="../assets/project-images/rue-berri-a-travelrama-2007/background.jpg" alt="Rue Berri (a Travelrama), 2007" loading="lazy">
+        </div>
+        <div class="image-full">
+            <img src="../assets/project-images/rue-berri-a-travelrama-2007/lookpoint.jpg" alt="Rue Berri (a Travelrama), 2007" loading="lazy">
+        </div>
+        <div class="image-full">
+            <img src="../assets/project-images/rue-berri-a-travelrama-2007/gallery-two.jpg" alt="Rue Berri (a Travelrama), 2007" loading="lazy">
+        </div>
+        <div class="image-full">
+            <img src="../assets/project-images/rue-berri-a-travelrama-2007/bernard.jpg" alt="Rue Berri (a Travelrama), 2007" loading="lazy">
+        </div>
+        <div class="image-full">
+            <img src="../assets/project-images/rue-berri-a-travelrama-2007/main-berri.jpg" alt="Rue Berri (a Travelrama), 2007" loading="lazy">
+        </div>
+        <div class="image-full">
+            <img src="../assets/project-images/rue-berri-a-travelrama-2007/old-woman.jpg" alt="Rue Berri (a Travelrama), 2007" loading="lazy">
+        </div>
+        <div class="image-full">
+            <img src="../assets/project-images/rue-berri-a-travelrama-2007/gallery-screendolly.jpg" alt="Rue Berri (a Travelrama), 2007" loading="lazy">
+        </div>
+        <div class="image-full">
+            <img src="../assets/project-images/rue-berri-a-travelrama-2007/thumb.jpg" alt="Rue Berri (a Travelrama), 2007" loading="lazy">
+        </div>
+            
+            <p>Rue Berri is an outdoor performance that feeds an interactive video installation inside in the gallery.</p>
+        <p>During a multi-day performance I push up and down Berri street a custom-made camera dolly which is outfitted with video and position recording equipment. This “new media object” allows me to interact with the people and activities I encounter and to record them in their particular space and time.</p>
+        <p>The data collected from these encounters is sent to the gallery. Here, on a wide screen projection, the gallery visitor can see a processed accumulation of videos representing the street. Interacting with the projection, the viewer plays with the linearity of time and space by activating and layering short video clips.</p>
+        <p>By using the slit-scan imaging technique to segment and reassemble the video footage I am able to transform a particular space and time sequence into a perceptible space-time object with a unique aesthetic quality. It now becomes possible to perceive and analyze the correlation between time and space in a non-linear way.</p>
+        <p>Neighbors whose daily routines fall slightly out of synch are now woven together on the same screen. The idea of time as a non-reversible stream should be challenged, because it discourages us to explore the wide range of possible human interactions.</p>
+        <p>How it works.</p>
+        <p>The projected image can be described in two parts part one being the long panoramic background image and part two being the short street level video windows that are moving the left and to the right, on top of the background image.</p>
+        <p>Part of my interest in this work is to condense the time and events that happen on the street. I spend multiple days on Rue Berri with my costume made camera dolly to record video footage of my interaction with the street. I recorded video and location of the video with the help of the dolly. That's why you can see a mechanical computer mouse and an RFID tag reader attached to the dolly. Both were connected to a laptop. The mouse gave me my relative position and the RFID tags supplied me with recurring absolute markers.</p>
+        <p>The document of my time outside on the street can now be experienced inside in the gallery.</p>
+        <p>A video tracking system in the gallery tracks the visitor's position in the room. Once a visitor steps closer to the screen a MaxMSP patch places a street-video on the screen close to the visitor. Once a street-video is placed it starts moving to the left or right, depending on what my movements were on the street. I choose never to allow more than three videos to be placed at the same time.</p>
+        <p>So far I have 74 street-videos. In most of them I am recording people walking, in some I have conversations with people in front and behind the camera, others are 'empty' and just show the street.</p>
+        <p>I entered each video in to a database. When a visitor steps closer to the screen the database is searched for a street-video that at one point of it's duration occupies the same space which the visitor can see right in front of her. This means the selection and placement is not random.</p>
+        <p>Now the visitor can choose to let the street life pass by - like one would while standing on a street corner - or the visitor can walk with the street-video and listen to the accompanying sound.</p>
+        <p>Over six speakers the sound of each video travels pans in unity with the video's location. This is done through a multi-channel sound card and an other MaxMSP patch.</p>
+        <p>About the background image.Once in a while the projected system rotates so that a three-dimensional view on to the whole scene is revealed. One can see three panoramic bands interweaving with one-another. Each panoramic band shows a different time of day. They are pre-made and do not change in themselves. Though each is performing a waving movement and weaves in to the other bands. When projected system rotates back to is 'normal' state - the front view - the three separate bands and their wave movement can not be seen. Instead the visitor now sees one wide panoramic band of the street that shows multiple times at once. That is the reason why sometimes the background image shows the street at night or day.</p>
+        <p>To create those bands I picked three of the 74 clips, three that have video footage that cover the whole 50 meters from the corner in to the street. I wrote an other MaxMSP patch take one video and scans through each frame. The patch copies a 5 pixel thick vertical pixel line from the center or each frame and pasts them one beside the other. Since the video is basically a travel shot revealing the street, each frame shows a slightly new part of the street. This technique is called slit-scan.(see http://www.flong.com/writings/lists/list_slit_scan.html for more information)</p>
+        <p>The projected part of the work is all done in MaxMSP through the use of Jitter and openGL.</p>
         
-
-        <div style="margin-top: 48px;">
-            <p style="color: var(--text-secondary); font-size: 14px;">
-                More details and documentation coming soon.
-            </p>
+            
+            
         </div>
     </main>
 </body>

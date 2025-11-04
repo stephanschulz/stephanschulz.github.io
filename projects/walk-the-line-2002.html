@@ -6,81 +6,179 @@
     <title>Walk The Line, 2002 - Stephan Schulz</title>
     <link rel="stylesheet" href="../styles.css">
     <style>
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--text-secondary);
-            text-decoration: none;
+        .breadcrumb {
             font-size: 14px;
+            color: var(--text-secondary);
             margin-bottom: 24px;
-            transition: color 0.2s ease;
         }
-        .back-link:hover {
-            color: var(--text-primary);
-        }
-        .project-header {
-            margin-bottom: 32px;
-        }
-        .project-meta {
-            display: flex;
-            gap: 16px;
-            font-size: 14px;
+        .breadcrumb a {
             color: var(--text-secondary);
-            margin-top: 8px;
-        }
-        .project-image-large {
-            width: 100%;
-            border-radius: 6px;
-            margin-bottom: 32px;
-        }
-        .external-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px 24px;
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            color: var(--text-primary);
             text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
-            transition: all 0.2s ease;
         }
-        .external-link:hover {
-            background: var(--bg-hover);
-            transform: translateY(-1px);
+        .breadcrumb a:hover {
+            color: var(--text-primary);
+        }
+        .properties {
+            width: 100%;
+            margin: 24px 0 32px 0;
+            font-size: 14px;
+            border: none;
+        }
+        .property-row {
+            border-bottom: 1px solid var(--border-color);
+        }
+        .property-row th {
+            padding: 12px 0;
+            font-weight: 400;
+            color: var(--text-secondary);
+            width: 30%;
+            vertical-align: top;
+            text-align: left;
+        }
+        .property-row td {
+            padding: 12px 0;
+            color: var(--text-primary);
+        }
+        .icon {
+            margin-right: 8px;
+            opacity: 0.6;
+        }
+        .url-value {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        .url-value:hover {
+            text-decoration: underline;
+        }
+        .tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            font-size: 12px;
+            margin-right: 8px;
+            border: 1px solid var(--border-color);
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 32px 0;
+        }
+        .image-column img,
+        .image-full img {
+            width: 100%;
+            border-radius: 3px;
+            display: block;
+        }
+        .image-full {
+            margin: 32px 0;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid var(--border-color);
+            margin: 48px 0 24px 0;
+        }
+        h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 24px 0 16px 0;
+        }
+        p {
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+        @media (max-width: 768px) {
+            .image-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <main class="container">
-        <a href="../index.html" class="back-link">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-                <path d="M8.5 1.5l-7 7 7 7V10h6.5V6H8.5V1.5z"/>
-            </svg>
-            Back to Projects
-        </a>
-
-        <div class="project-header">
-            <h1 class="page-title">Walk The Line, 2002</h1>
-            <div class="project-meta">
-                <span>Year: 2002</span>
-                <span>•</span>
-                <span>Stephan Schulz</span>
-                
-            </div>
+        <div class="breadcrumb">
+            <a href="../index.html">Stephan Schulz</a> / 
+            <a href="../index.html">Projects and Artworks</a> / 
+            Walk The Line, 2002
         </div>
 
-        <img src="../assets/projects/walk-the-line.jpg" alt="Walk The Line, 2002" class="project-image-large" onerror="this.style.display='none'">
+        <header>
+            <h1 class="page-title">Walk The Line, 2002</h1>
+            
+        <table class="properties">
+            <tbody>
+                <tr class="property-row">
+                    <th>
+                        <span class="icon">👤</span>
+                        for
+                    </th>
+                    <td>Stephan Schulz</td>
+                </tr>
+                <tr class="property-row">
+                    <th>
+                        <span class="icon">#</span>
+                        Year
+                    </th>
+                    <td>2002</td>
+                </tr>
+                <tr class="property-row">
+                    <th>
+                        <span class="icon">📋</span>
+                        I did
+                    </th>
+                    <td><span class="tag"></span></td>
+                </tr>
+            </tbody>
+        </table>
+        </header>
 
+        <div class="page-body">
+            
+        <div class="image-grid">
+            <div class="image-column">
+                <img src="../assets/project-images/walk-the-line-2002/thumb.jpg" alt="Walk The Line, 2002" loading="lazy">
+            </div>
+            <div class="image-column">
+                <img src="../assets/project-images/walk-the-line-2002/land8.gif" alt="Walk The Line, 2002" loading="lazy">
+            </div>
+        </div>
+        <div class="image-full">
+            <img src="../assets/project-images/walk-the-line-2002/sound1.gif" alt="Walk The Line, 2002" loading="lazy">
+        </div>
+        <div class="image-full">
+            <img src="../assets/project-images/walk-the-line-2002/fuss6.gif" alt="Walk The Line, 2002" loading="lazy">
+        </div>
+        <div class="image-full">
+            <img src="../assets/project-images/walk-the-line-2002/sound2.gif" alt="Walk The Line, 2002" loading="lazy">
+        </div>
+        <div class="image-full">
+            <img src="../assets/project-images/walk-the-line-2002/fuss3.gif" alt="Walk The Line, 2002" loading="lazy">
+        </div>
+        <div class="image-full">
+            <img src="../assets/project-images/walk-the-line-2002/fuss2.gif" alt="Walk The Line, 2002" loading="lazy">
+        </div>
+        <div class="image-full">
+            <img src="../assets/project-images/walk-the-line-2002/tschau.gif" alt="Walk The Line, 2002" loading="lazy">
+        </div>
+        <div class="image-full">
+            <img src="../assets/project-images/walk-the-line-2002/bruck2.gif" alt="Walk The Line, 2002" loading="lazy">
+        </div>
+        <div class="image-full">
+            <img src="../assets/project-images/walk-the-line-2002/land1.gif" alt="Walk The Line, 2002" loading="lazy">
+        </div>
+        <div class="image-full">
+            <img src="../assets/project-images/walk-the-line-2002/bruck1.gif" alt="Walk The Line, 2002" loading="lazy">
+        </div>
+        <div class="image-full">
+            <img src="../assets/project-images/walk-the-line-2002/bruck4.gif" alt="Walk The Line, 2002" loading="lazy">
+        </div>
+            
+            <p>https://www.youtube.com/watch?v=eA0EWjafjec&t=2s</p>
+        <p>Ich will mit der Idee der Modularität zwischen dem Menschen und seiner Umgebung weiter arbeiten; einen Weg finden durch das Chaos von Möglichkeiten, die uns zwar nicht so bewußt sind aber immer umgeben. Die Variabilität der Situation und des Zeitpunktes, sind Module aus denen ich einen Weg zusammensetzen möchte. Ich stelle mir fünf bis sechs Filmbilder nebeneinander vor, die alle fixe Räume zweigen. Eine Hauptperson kann sich durch diese Bilder bewegen und in jedem etwas anderes kleines erleben. Jeder Film kann zeitlich verändert werden und dadurch eine neue Bespielung der Szene ermöglichen. Es ist also so, als ob der Darsteller zuspät in eine Szene kommen kann und damit der 'richtige' Verlauf des Filmes gestört ist. Man kann also die einzelnen Szenen die alle nebeneinander zusehen sind in ihrer darstellenden Situation verändern und dadurch variable Filmverläufe und Räume erzielen. Durch das spielen mit den Möglichkeiten eines sonst fixen Ablaufes entsteht vielleicht eine flexiblere Idee von Zeit.</p>
         
-
-        <div style="margin-top: 48px;">
-            <p style="color: var(--text-secondary); font-size: 14px;">
-                More details and documentation coming soon.
-            </p>
+            
+            
         </div>
     </main>
 </body>

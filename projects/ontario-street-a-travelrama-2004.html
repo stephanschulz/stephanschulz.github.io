@@ -6,81 +6,148 @@
     <title>Ontario Street (a Travelrama), 2004 - Stephan Schulz</title>
     <link rel="stylesheet" href="../styles.css">
     <style>
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--text-secondary);
-            text-decoration: none;
+        .breadcrumb {
             font-size: 14px;
+            color: var(--text-secondary);
             margin-bottom: 24px;
-            transition: color 0.2s ease;
         }
-        .back-link:hover {
-            color: var(--text-primary);
-        }
-        .project-header {
-            margin-bottom: 32px;
-        }
-        .project-meta {
-            display: flex;
-            gap: 16px;
-            font-size: 14px;
+        .breadcrumb a {
             color: var(--text-secondary);
-            margin-top: 8px;
-        }
-        .project-image-large {
-            width: 100%;
-            border-radius: 6px;
-            margin-bottom: 32px;
-        }
-        .external-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px 24px;
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            color: var(--text-primary);
             text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
-            transition: all 0.2s ease;
         }
-        .external-link:hover {
-            background: var(--bg-hover);
-            transform: translateY(-1px);
+        .breadcrumb a:hover {
+            color: var(--text-primary);
+        }
+        .properties {
+            width: 100%;
+            margin: 24px 0 32px 0;
+            font-size: 14px;
+            border: none;
+        }
+        .property-row {
+            border-bottom: 1px solid var(--border-color);
+        }
+        .property-row th {
+            padding: 12px 0;
+            font-weight: 400;
+            color: var(--text-secondary);
+            width: 30%;
+            vertical-align: top;
+            text-align: left;
+        }
+        .property-row td {
+            padding: 12px 0;
+            color: var(--text-primary);
+        }
+        .icon {
+            margin-right: 8px;
+            opacity: 0.6;
+        }
+        .url-value {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        .url-value:hover {
+            text-decoration: underline;
+        }
+        .tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            font-size: 12px;
+            margin-right: 8px;
+            border: 1px solid var(--border-color);
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 32px 0;
+        }
+        .image-column img,
+        .image-full img {
+            width: 100%;
+            border-radius: 3px;
+            display: block;
+        }
+        .image-full {
+            margin: 32px 0;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid var(--border-color);
+            margin: 48px 0 24px 0;
+        }
+        h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 24px 0 16px 0;
+        }
+        p {
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+        @media (max-width: 768px) {
+            .image-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <main class="container">
-        <a href="../index.html" class="back-link">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-                <path d="M8.5 1.5l-7 7 7 7V10h6.5V6H8.5V1.5z"/>
-            </svg>
-            Back to Projects
-        </a>
-
-        <div class="project-header">
-            <h1 class="page-title">Ontario Street (a Travelrama), 2004</h1>
-            <div class="project-meta">
-                <span>Year: 2004</span>
-                <span>•</span>
-                <span>Stephan Schulz</span>
-                
-            </div>
+        <div class="breadcrumb">
+            <a href="../index.html">Stephan Schulz</a> / 
+            <a href="../index.html">Projects and Artworks</a> / 
+            Ontario Street (a Travelrama), 2004
         </div>
 
-        <img src="../assets/projects/ontario-street-a-travelrama.jpg" alt="Ontario Street (a Travelrama), 2004" class="project-image-large" onerror="this.style.display='none'">
+        <header>
+            <h1 class="page-title">Ontario Street (a Travelrama), 2004</h1>
+            
+        <table class="properties">
+            <tbody>
+                <tr class="property-row">
+                    <th>
+                        <span class="icon">👤</span>
+                        for
+                    </th>
+                    <td>Stephan Schulz</td>
+                </tr>
+                <tr class="property-row">
+                    <th>
+                        <span class="icon">#</span>
+                        Year
+                    </th>
+                    <td>2004</td>
+                </tr>
+                <tr class="property-row">
+                    <th>
+                        <span class="icon">📋</span>
+                        I did
+                    </th>
+                    <td><span class="tag"></span></td>
+                </tr>
+            </tbody>
+        </table>
+        </header>
 
+        <div class="page-body">
+            
+            
+            <p>https://www.youtube.com/watch?v=WZJh32t21V</p>
+        <p>This installation is in a way a documentation of a performance on 'Ontario Street'. For many days I walked the same street up and down equipped with a camera and a dolly. When ever I encountered other pedestrians I filmed them and started conversations. While they were walking along one side of the street, I was walking on the other pushing my camera dolly. My permanent presence on the street gave me the opportunity to grain a wider view in to this specific neighbourhood.</p>
+        <p>On a 18 meter long and 1 meter high projection screen I am now projecting the clips that I filmed. Each clip shows a pedestrian walking his way and sometimes stopping to talk to me or others. When ever the pedestrian in the clip walks on the street the video clip moves along theprojection screen, always connected to the location it was filmed in. The visitor can now choose to follow those clips and needs to walk in order to stay with the moving clip. After a while the projection screen fills with multiple clips, each presenting a new pedestrian and a new glimpse into a persons day. Since I filmed each pedestrian separate neither ever meets the others. When two clips meet in the same location on the screen one overlays the other and creates a visual moment in which multiple street-times inhabit the same space.</p>
+        <p>All the clips are moving on a still background image that shows the whole street. This background image is an isometric one. I extracted scan lines out of a travel shot parallel to the street. Pasted together, these scan lines create a continuous long still image. It was important to have a neutral background so that each clips central perspective gains more attention and importance.</p>
+        <p>Each clip while moving on the projection screen has a soundtrack going along with it. Seven speakers equally distributed behind screen make the sound travel together with the clip. On-location-conversations and atmospherical street sounds accompany each clip.</p>
+        <p>I connected each clip and their sound to the location in which I filmed. During the filming process I used a custom built dolly onto which I attached a mechanical computer mouse. Whenever I moved the dolly the on-board iBook would record the scrolled distance of the mouse. By linking the recorded video to its position I am now able to make every clip move in the right speed and location on the projection screen and recreate the feeling of being and walking on the street.</p>
+        <p>On a separate computer monitor in the opposite side of the room, the visitor can observe the process through which the clips get selected and eventually displayed, out of a pool of 60 clips. It was important to me to select the displayed clips through a process that uses the metaphor of the street. While every clip is running though its routine again and again, its position in the graphical representation shifts in relation to the other clips. On the left of the monitor the visitor can see the spacial expansion of all the video clips and on the right the clips are presented in their temporal relation to each other. The program is running through all the different permutations that the video clips can be show in. Because of this process the total duration is about 20 days.</p>
+        <p>I am also exhibiting the custom made dolly, since it is an essential part of the performance. The strange look of the dolly played a big part in encountering pedestrians. In the spirit of Krzysztof Wodiczko, I experienced the positive impact a very technical vehicle/ alien-object can have. The dolly worked as a catalyse for communication, it helped me to make contact with people. By causing curiosity, the fear of the stranger and the camera faded and a friendly encounter was possible.</p>
+        <p>I recorded up to 100 different situations, 100 different layers, and facesof this street. For me the street is like an object, in which not only the architecture creates the meaning of the object, but the moving parts, the pedestrians, are the essential element. I think their behaviour can bring the meaning of a street as a public space into full bloom. This, I believe, is only possible through communication and interaction.</p>
         
-
-        <div style="margin-top: 48px;">
-            <p style="color: var(--text-secondary); font-size: 14px;">
-                More details and documentation coming soon.
-            </p>
+            
+            
         </div>
     </main>
 </body>
