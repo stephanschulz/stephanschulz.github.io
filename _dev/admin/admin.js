@@ -55,7 +55,7 @@ async function loadImages() {
         }
         
         loadedImages = data.images;
-        renderImages();
+        await renderImages();
         updatePreview();
         showMessage(`Loaded ${loadedImages.length} images`, 'success');
     } catch (error) {
@@ -116,10 +116,10 @@ async function renderImages() {
     // Add remove button listeners
     const removeButtons = container.querySelectorAll('.remove-image');
     removeButtons.forEach(btn => {
-        btn.addEventListener('click', (e) => {
+        btn.addEventListener('click', async (e) => {
             const index = parseInt(e.target.dataset.index);
             loadedImages.splice(index, 1);
-            renderImages();
+            await renderImages();
             updatePreview();
         });
     });
@@ -140,7 +140,7 @@ function handleDragOver(e) {
     return false;
 }
 
-function handleDrop(e) {
+async function handleDrop(e) {
     if (e.stopPropagation) {
         e.stopPropagation();
     }
@@ -153,7 +153,7 @@ function handleDrop(e) {
         const [removed] = loadedImages.splice(draggedIndex, 1);
         loadedImages.splice(targetIndex, 0, removed);
         
-        renderImages();
+        await renderImages();
         updatePreview();
     }
     
@@ -162,26 +162,6 @@ function handleDrop(e) {
 
 function handleDragEnd(e) {
     e.target.classList.remove('dragging');
-}
-
-async function updatePreviewImages() {
-    // Load base64 data for preview
-    for (let i = 0; i < loadedImages.length; i++) {
-        if (!loadedImages[i].base64) {
-            try {
-                const response = await fetch('/api/serve-local-image', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ path: loadedImages[i].path })
-                });
-                const data = await response.json();
-                loadedImages[i].base64 = data.data;
-            } catch (error) {
-                console.error('Failed to load image for preview:', loadedImages[i].path);
-            }
-        }
-    }
-    updatePreview();
 }
 
 function updatePreview() {

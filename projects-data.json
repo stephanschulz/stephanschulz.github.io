@@ -1,5 +1,15 @@
 [
   {
+    "name": "test 3, 2028",
+    "year": "2028",
+    "collaborator": "Hugo",
+    "link": "https://lozano-hemmer.com",
+    "role": "software",
+    "slug": "test-3-2028",
+    "image": "projects/test-3-2028/images/cover.jpg",
+    "hasDetailPage": true
+  },
+  {
     "name": "test 2, 2027",
     "year": "2027",
     "collaborator": "Peter",

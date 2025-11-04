@@ -12,6 +12,9 @@ Main script to generate project pages from Notion export.
 python3 _dev/generate-notion-pages.py
 ```
 
+API to create a new project page
+```python3 _dev/admin-server.py```
+
 **What it does:**
 - Parses Notion HTML exports
 - Generates project detail pages in `projects/{slug}/index.html`
