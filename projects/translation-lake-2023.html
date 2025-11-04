@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translation Lake, 2023 - Stephan Schulz</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 24px;
+            transition: color 0.2s ease;
+        }
+        .back-link:hover {
+            color: var(--text-primary);
+        }
+        .project-header {
+            margin-bottom: 32px;
+        }
+        .project-meta {
+            display: flex;
+            gap: 16px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-top: 8px;
+        }
+        .project-image-large {
+            width: 100%;
+            border-radius: 6px;
+            margin-bottom: 32px;
+        }
+        .external-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        .external-link:hover {
+            background: var(--bg-hover);
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <a href="../index.html" class="back-link">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M8.5 1.5l-7 7 7 7V10h6.5V6H8.5V1.5z"/>
+            </svg>
+            Back to Projects
+        </a>
+
+        <div class="project-header">
+            <h1 class="page-title">Translation Lake, 2023</h1>
+            <div class="project-meta">
+                <span>Year: 2023</span>
+                <span>•</span>
+                <span>Rafael Lozano-Hemmer</span>
+                <span>•</span><span>Role: Electronics, Software</span>
+            </div>
+        </div>
+
+        <img src="../assets/projects/translation-lake.jpg" alt="Translation Lake, 2023" class="project-image-large" onerror="this.style.display='none'">
+
+        <a href="https://www.lozano-hemmer.com/translation_lake.php" target="_blank" class="external-link">
+            View Official Project Page
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2zm6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1z"/>
+            </svg>
+        </a>
+
+        <div style="margin-top: 48px;">
+            <p style="color: var(--text-secondary); font-size: 14px;">
+                More details and documentation coming soon.
+            </p>
+        </div>
+    </main>
+</body>
+</html>

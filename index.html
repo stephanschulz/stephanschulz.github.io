@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stephan Schulz</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+        <!-- Header Section -->
+        <header class="header">
+            <h1 class="main-title">Stephan Schulz</h1>
+            <a href="https://stephanschulz.ca" class="website-link" target="_blank">www.stephanschulz.ca</a>
+            <p class="subtitle">Media Artist + Technology Developer from Montréal and Berlin</p>
+            <p class="role">Head of RnD for <a href="https://antimodular.com" target="_blank">Antimodular Research Inc.</a></p>
+            
+            <div class="header-nav">
+                <a href="about.html" class="nav-link">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M4 2.5a2.5 2.5 0 1 1 5 0 2.5 2.5 0 0 1-5 0zm2.5-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM3.5 8a2.5 2.5 0 1 1 5 0 2.5 2.5 0 0 1-5 0zm2.5-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"></path>
+                        <path d="M2 13.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"></path>
+                    </svg>
+                    About
+                </a>
+            </div>
+        </header>
+
+        <!-- Projects Section -->
+        <section class="projects-section">
+            <div class="section-header">
+                <h2 class="section-title">Projects and Artworks</h2>
+                <div class="view-controls">
+                    <button class="view-btn active" data-view="year">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor">
+                            <path d="M2 0h3v3H2V0zm4.5 0h3v3h-3V0zM11 0h3v3h-3V0zM2 4.5h3v3H2v-3zm4.5 0h3v3h-3v-3zm4.5 0h3v3h-3v-3zM2 9h3v3H2V9zm4.5 0h3v3h-3V9zm4.5 0h3v3h-3V9z"></path>
+                        </svg>
+                        by Year
+                    </button>
+                    <button class="view-btn" data-view="alpha">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor">
+                            <path d="M2 0h3v3H2V0zm4.5 0h3v3h-3V0zM11 0h3v3h-3V0zM2 4.5h3v3H2v-3zm4.5 0h3v3h-3v-3zm4.5 0h3v3h-3v-3zM2 9h3v3H2V9zm4.5 0h3v3h-3V9zm4.5 0h3v3h-3V9z"></path>
+                        </svg>
+                        A -> Z
+                    </button>
+                </div>
+            </div>
+
+            <div class="projects-grid" id="projects-grid">
+                <!-- Projects loaded dynamically from projects-data.json -->
+            </div>
+            
+            <div class="load-more-container" id="load-more-container">
+                <button class="load-more-btn" id="load-more-btn">Load More Projects</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

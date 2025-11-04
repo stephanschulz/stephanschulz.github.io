@@ -1,0 +1,912 @@
+[
+  {
+    "name": "Pulsos del agua, 2025",
+    "year": "2025",
+    "collaborator": "Nelson Vergara",
+    "link": "web.unal.edu.co",
+    "role": "C++, Software",
+    "slug": "pulsos-del-agua-2025",
+    "image": "assets/projects/pulsos-del-agua.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Dark Ride, 2024",
+    "year": "2024",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "https://www.lozano-hemmer.com/dark_ride.php",
+    "role": "Hardware, Software",
+    "slug": "dark-ride-2024",
+    "image": "assets/projects/dark-ride.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Kristallstimmen, 2024",
+    "year": "2024",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "https://www.lozano-hemmer.com/kristallstimmen.php",
+    "role": "Hardware",
+    "slug": "kristallstimmen-2024",
+    "image": "assets/projects/kristallstimmen.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Pulse Voronoi, 2024",
+    "year": "2024",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "https://www.lozano-hemmer.com/pulse_voronoi_.php",
+    "role": "Hardware, Software",
+    "slug": "pulse-voronoi-2024",
+    "image": "assets/projects/pulse-voronoi.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Climate Parliament, 2024",
+    "year": "2024",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "https://www.lozano-hemmer.com/climate_parliament.php",
+    "role": "Hardware",
+    "slug": "climate-parliament-2024",
+    "image": "assets/projects/climate-parliament.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Pulse Agglomerate, 2024",
+    "year": "2024",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "https://www.lozano-hemmer.com/pulse_agglomerate.php",
+    "role": "C++, Hardware, Performance, Software",
+    "slug": "pulse-agglomerate-2024",
+    "image": "assets/projects/pulse-agglomerate.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Transparency Display, 2024",
+    "year": "2024",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "https://www.lozano-hemmer.com/transparency_display.php",
+    "role": "Firmware, Hardware",
+    "slug": "transparency-display-2024",
+    "image": "assets/projects/transparency-display.png",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Pulse Island, 2023",
+    "year": "2023",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "https://www.lozano-hemmer.com/pulse_island.php",
+    "role": "Electronics, Hardware, Software",
+    "slug": "pulse-island-2023",
+    "image": "assets/projects/pulse-island.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Translation Lake, 2023",
+    "year": "2023",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "https://www.lozano-hemmer.com/translation_lake.php",
+    "role": "Electronics, Software",
+    "slug": "translation-lake-2023",
+    "image": "assets/projects/translation-lake.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Voice Basin, 2023",
+    "year": "2023",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "https://www.lozano-hemmer.com/voice_basin.php",
+    "role": "Software",
+    "slug": "voice-basin-2023",
+    "image": "assets/projects/voice-basin.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Collider, 2023",
+    "year": "2023",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "https://www.lozano-hemmer.com/collider.php",
+    "role": "Electronics, Firmware",
+    "slug": "collider-2023",
+    "image": "assets/projects/collider.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "All the Waters, 2022",
+    "year": "2022",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "",
+    "role": "Software",
+    "slug": "all-the-waters-2022",
+    "image": "assets/projects/all-the-waters.png",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Embodied Light Beacons, 2022",
+    "year": "2022",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "",
+    "role": "Software",
+    "slug": "embodied-light-beacons-2022",
+    "image": "assets/projects/embodied-light-beacons.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Pulse Forest, 2022",
+    "year": "2022",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "",
+    "role": "Hardware, Software",
+    "slug": "pulse-forest-2022",
+    "image": "assets/projects/pulse-forest.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Voice Forest, 2022",
+    "year": "2022",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "",
+    "role": "Software",
+    "slug": "voice-forest-2022",
+    "image": "assets/projects/voice-forest.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Botella de Castigos, 2022",
+    "year": "2022",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "https://vimeo.com/827338768",
+    "role": "Sourcing",
+    "slug": "botella-de-castigos-2022",
+    "image": "assets/projects/botella-de-castigos.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Password Breach, 2021",
+    "year": "2021",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "https://www.lozano-hemmer.com/password_breach.php",
+    "role": "Firmware, Hardware, Sourcing",
+    "slug": "password-breach-2021",
+    "image": "assets/projects/password-breach.jpeg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "33 Questions per Minute, online, 2021",
+    "year": "2021",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "https://33-questions.glitch.me/",
+    "role": "Java Script",
+    "slug": "33-questions-per-minute-online-2021",
+    "image": "assets/projects/33-questions-per-minute.png",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Makeout online, 2021",
+    "year": "2021",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "https://bambarajos-3a25c.web.app/",
+    "role": "Java Script, P5JS",
+    "slug": "makeout-online-2021",
+    "image": "assets/projects/makeout-online.png",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Pulse Topology, 2021",
+    "year": "2021",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "https://www.lozano-hemmer.com/pulse_topology.php",
+    "role": "Software",
+    "slug": "pulse-topology-2021",
+    "image": "assets/projects/pulse-topology.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Field Atmosphonia, 2020",
+    "year": "2020",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "https://vimeo.com/491274258",
+    "role": "Hardware, PCB Design, Software, Sourcing",
+    "slug": "field-atmosphonia-2020",
+    "image": "assets/projects/field-atmosphonia.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "The Crack in the Hourglass, 2020",
+    "year": "2020",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "https://acrackinthehourglass.net/",
+    "role": "C++, Hardware",
+    "slug": "the-crack-in-the-hourglass-2020",
+    "image": "assets/projects/the-crack-in-the-hourglass.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Flag Beacon, 2019",
+    "year": "2019",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "https://vimeo.com/348107293",
+    "role": "Software",
+    "slug": "flag-beacon-2019",
+    "image": "assets/projects/flag-beacon.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Voice Bridge, 2019",
+    "year": "2019",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "https://vimeo.com/365026525",
+    "role": "PCB Design, Software",
+    "slug": "voice-bridge-2019",
+    "image": "assets/projects/voice-bridge.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Voice Tank, 2019",
+    "year": "2019",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "https://www.lozano-hemmer.com/voice_tank.php",
+    "role": "Firmware, PCB Design, Software",
+    "slug": "voice-tank-2019",
+    "image": "assets/projects/voice-tank.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Weather Vanes, 2019",
+    "year": "2019",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "https://www.lozano-hemmer.com/weather_vanes.php",
+    "role": "Firmware, PCB Design, Software",
+    "slug": "weather-vanes-2019",
+    "image": "assets/projects/weather-vanes.png",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Remote Pulse, 2019",
+    "year": "2019",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "http://www.lozano-hemmer.com/remote_pulse.php",
+    "role": "Firmware, PCB Design, Software",
+    "slug": "remote-pulse-2019",
+    "image": "assets/projects/remote-pulse.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Border Tuner, 2019",
+    "year": "2019",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "http://lozano-hemmer.com/border_tuner__sintonizador_fronterizo.php",
+    "role": "Software",
+    "slug": "border-tuner-2019",
+    "image": "assets/projects/border-tuner.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Linear Atmosphonia, 2019",
+    "year": "2019",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "https://www.lozano-hemmer.com/linear_atmosphonia.php",
+    "role": "Software, Sourcing",
+    "slug": "linear-atmosphonia-2019",
+    "image": "assets/projects/linear-atmosphonia.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Sustained Coincidence, 2007 & 2019",
+    "year": "2019",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "https://www.lozano-hemmer.com/sustained_coincidence.php",
+    "role": "Software",
+    "slug": "sustained-coincidence-2007-and-2019",
+    "image": "assets/projects/sustained-coincidence.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Sphere Packing: Bach, 2018",
+    "year": "2018",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "http://lozano-hemmer.com/sphere_packing_bach.php",
+    "role": "PCB Design, Software, Sourcing",
+    "slug": "sphere-packing-bach-2018",
+    "image": "assets/projects/sphere-packing-bach.jpg",
+    "hasDetailPage": false
+  },
+  {
+    "name": "Metrónomos, 2018",
+    "year": "2018",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "http://lozano-hemmer.com/sway.php",
+    "role": "Firmware, Mechatronic, PCB Design, Software",
+    "slug": "metrónomos-2018",
+    "image": "assets/projects/metrónomos.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Sandbox, 2010 + 2018 + 2023",
+    "year": "2018",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "http://www.lozano-hemmer.com/sandbox.php",
+    "role": "Software",
+    "slug": "sandbox-2010--2018--2023",
+    "image": "assets/projects/sandbox.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Voice Theatre, 2018",
+    "year": "2018",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "",
+    "role": "Software",
+    "slug": "voice-theatre-2018",
+    "image": "assets/projects/voice-theatre.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Pareidolium, 2018",
+    "year": "2018",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "http://www.lozano-hemmer.com/pareidolium.php",
+    "role": "Hardware, Software, Sourcing",
+    "slug": "pareidolium-2018",
+    "image": "assets/projects/pareidolium.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Colorimètre, 2017",
+    "year": "2017",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "",
+    "role": "Software",
+    "slug": "colorimètre-2017",
+    "image": "assets/projects/colorimètre.jpg",
+    "hasDetailPage": false
+  },
+  {
+    "name": "Saturation Sampler, 2017",
+    "year": "2017",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "https://vimeo.com/247217474",
+    "role": "Software",
+    "slug": "saturation-sampler-2017",
+    "image": "assets/projects/saturation-sampler.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Recorded Assembly, 2017, 2019, 2023",
+    "year": "2017",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "https://vimeo.com/226964493",
+    "role": "Hardware, Software",
+    "slug": "recorded-assembly-2017-2019-2023",
+    "image": "assets/projects/recorded-assembly.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Wavefunction, 2007 & 2017",
+    "year": "2017",
+    "collaborator": "Stephan Schulz",
+    "link": "http://www.lozano-hemmer.com/wavefunction.php",
+    "role": "Software",
+    "slug": "wavefunction-2007-and-2017",
+    "image": "assets/projects/wavefunction.png",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Bilateral Time Slice, 2016",
+    "year": "2016",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "http://lozano-hemmer.com/bilateral_time_slicer.php",
+    "role": "Software",
+    "slug": "bilateral-time-slice-2016",
+    "image": "assets/projects/bilateral-time-slice.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Call on Water, 2016",
+    "year": "2016",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "http://lozano-hemmer.com/call_on_water.php",
+    "role": "Hardware, Software, Sourcing",
+    "slug": "call-on-water-2016",
+    "image": "assets/projects/call-on-water.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Redundant Assembly, 2015",
+    "year": "2015",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "http://lozano-hemmer.com/redundant_assembly.php",
+    "role": "Software",
+    "slug": "redundant-assembly-2015",
+    "image": "assets/projects/redundant-assembly.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Zoom Pavilion, 2015",
+    "year": "2015",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "http://lozano-hemmer.com/zoom_pavilion.php",
+    "role": "Software, Sourcing",
+    "slug": "zoom-pavilion-2015",
+    "image": "assets/projects/zoom-pavilion.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Level of Confidence, 2015",
+    "year": "2015",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "http://lozano-hemmer.com/level_of_confidence.php",
+    "role": "Software",
+    "slug": "level-of-confidence-2015",
+    "image": "assets/projects/level-of-confidence.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Pan Anthem, 2014",
+    "year": "2014",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "http://lozano-hemmer.com/pan-anthem.php",
+    "role": "Firmware",
+    "slug": "pan-anthem-2014",
+    "image": "assets/projects/pan-anthem.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Nineteen-Eighty-Four, 2014",
+    "year": "2014",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "http://lozano-hemmer.com/nineteen_eighty-four.php",
+    "role": "Firmware, PCB Design, Software",
+    "slug": "nineteen-eighty-four-2014",
+    "image": "assets/projects/nineteen-eighty-four.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Coding for Kids, 2014",
+    "year": "2014",
+    "collaborator": "Eastern Bloc",
+    "link": "\"http://www.easternbloc.ca",
+    "role": "Teaching",
+    "slug": "coding-for-kids-2014",
+    "image": "assets/projects/coding-for-kids.png",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Family Coding and Electronics Workshop, 2014",
+    "year": "2014",
+    "collaborator": "Canadian Centre for Architecture",
+    "link": "https://www.cca.qc.ca/en/education-events",
+    "role": "Teaching",
+    "slug": "family-coding-and-electronics-workshop-2014",
+    "image": "assets/projects/family-coding-and-electronics-workshop.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Fiducial Voice Beacons, 2014",
+    "year": "2014",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "",
+    "role": "Firmware, PCB Design, Software",
+    "slug": "fiducial-voice-beacons-2014",
+    "image": "assets/projects/fiducial-voice-beacons.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Vicious Circular Breathing, 2013",
+    "year": "2013",
+    "collaborator": "@Rafael Lozano-Hemmer",
+    "link": "https://www.lozano-hemmer.com/vicious_circular_breathing.php",
+    "role": "Firmware, Hardware, Mechatronic, PCB Design, Software",
+    "slug": "vicious-circular-breathing-2013",
+    "image": "assets/projects/vicious-circular-breathing.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Voice Tunnel, 2013",
+    "year": "2013",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "http://www.lozano-hemmer.com/voice_tunnel.php",
+    "role": "Software",
+    "slug": "voice-tunnel-2013",
+    "image": "assets/projects/voice-tunnel.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Sphere Packing, 2013",
+    "year": "2013",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "https://www.lozano-hemmer.com/sphere_packing.php",
+    "role": "PCB Design, Sourcing",
+    "slug": "sphere-packing-2013",
+    "image": "assets/projects/sphere-packing.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "First Surface, 2012",
+    "year": "2012",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "http://lozano-hemmer.com/first_surface.php",
+    "role": "Software",
+    "slug": "first-surface-2012",
+    "image": "assets/projects/first-surface.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Semioptics for Spinoza, 2012",
+    "year": "2012",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "http://lozano-hemmer.com/semioptics_for_spinoza.php",
+    "role": "Software",
+    "slug": "semioptics-for-spinoza-2012",
+    "image": "assets/projects/semioptics-for-spinoza.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Source, 2012",
+    "year": "2012",
+    "collaborator": "Independent Media Arts Alliance",
+    "link": "www.imaa.ca",
+    "role": "Graphic Design",
+    "slug": "source-2012",
+    "image": "assets/projects/source.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Bifurcation, 2012",
+    "year": "2012",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "http://lozano-hemmer.com/bifurcation.php",
+    "role": "Software",
+    "slug": "bifurcation-2012",
+    "image": "assets/projects/bifurcation.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Voice Array, 2011",
+    "year": "2011",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "http://www.lozano-hemmer.com/voice_array.php",
+    "role": "Firmware, PCB Design, Software",
+    "slug": "voice-array-2011",
+    "image": "assets/projects/voice-array.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "X is not the new Y, 2011",
+    "year": "2011",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "https://www.lozano-hemmer.com/x_is_not_the_new_y.php",
+    "role": "Firmware, PCB Design",
+    "slug": "x-is-not-the-new-y-2011",
+    "image": "assets/projects/x-is-not-the-new-y.png",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Bambarajos, 2011",
+    "year": "2011",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "http://www.art-es.es/art_es_48_Press_Release.html",
+    "role": "Software",
+    "slug": "bambarajos-2011",
+    "image": "assets/projects/bambarajos.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Tape Recorders, 2011",
+    "year": "2011",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "http://lozano-hemmer.com/tape_recorders.php",
+    "role": "Firmware, Hardware, Mechatronic, PCB Design, Software",
+    "slug": "tape-recorders-2011",
+    "image": "assets/projects/tape-recorders.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Blätter, 2011",
+    "year": "2011",
+    "collaborator": "Nelson Vergara",
+    "link": "http://www.nelsonvergara.com/",
+    "role": "Software",
+    "slug": "blätter-2011",
+    "image": "assets/projects/blätter.jpg",
+    "hasDetailPage": false
+  },
+  {
+    "name": "Please Empty Your Pockets, 2010",
+    "year": "2010",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "http://lozano-hemmer.com/please_empty_your_pockets.php",
+    "role": "Software",
+    "slug": "please-empty-your-pockets-2010",
+    "image": "assets/projects/please-empty-your-pockets.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Cardinal Directions, 2010",
+    "year": "2010",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "http://lozano-hemmer.com/cardinal_directions.php",
+    "role": "Firmware, PCB Design, Software",
+    "slug": "cardinal-directions-2010",
+    "image": "assets/projects/cardinal-directions.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Parking Lot Barrier, 2010",
+    "year": "2010",
+    "collaborator": "Adrienne Spier",
+    "link": "http://www.parisianlaundry.com/exhibitions/adrienne_spier_fall",
+    "role": "Firmware, PCB Design",
+    "slug": "parking-lot-barrier-2010",
+    "image": "assets/projects/parking-lot-barrier.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Bta - Vcio, 2010",
+    "year": "2010",
+    "collaborator": "Nelson Vergara",
+    "link": "http://www.nelsonvergara.com",
+    "role": "Software",
+    "slug": "bta--vcio-2010",
+    "image": "assets/projects/bta--vcio.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Seismoscopes, 2009",
+    "year": "2009",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "http://lozano-hemmer.com/seismoscopes.php",
+    "role": "Firmware, Software",
+    "slug": "seismoscopes-2009",
+    "image": "assets/projects/seismoscopes.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "The Company of Colours, 2009",
+    "year": "2009",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "http://lozano-hemmer.com/the_company_of_colours.php",
+    "role": "Software",
+    "slug": "the-company-of-colours-2009",
+    "image": "assets/projects/the-company-of-colours.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Less Than Three (EL-version), 2008",
+    "year": "2008",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "http://lozano-hemmer.com/less_than_three.php",
+    "role": "Hardware, Sourcing",
+    "slug": "less-than-three-el-version-2008",
+    "image": "assets/projects/less-than-three-el-version.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Pulse Tank, 2008",
+    "year": "2008",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "http://www.lozano-hemmer.com/pulse_tank.php",
+    "role": "Hardware, Mechatronic, PCB Design, Software",
+    "slug": "pulse-tank-2008",
+    "image": "assets/projects/pulse-tank.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Espejo, 2008",
+    "year": "2008",
+    "collaborator": "Nelson Vergara",
+    "link": "http://www.nelsonvergara.com",
+    "role": "Software",
+    "slug": "espejo-2008",
+    "image": "assets/projects/espejo.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Reporters With Borders, 2007",
+    "year": "2007",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "http://lozano-hemmer.com/reporters_with_borders.php",
+    "role": "Layout Software",
+    "slug": "reporters-with-borders-2007",
+    "image": "assets/projects/reporters-with-borders.png",
+    "hasDetailPage": true
+  },
+  {
+    "name": "IMAA history (Publication), 2007",
+    "year": "2007",
+    "collaborator": "Independent Media Arts Alliance",
+    "link": "www.imaa.ca",
+    "role": "Graphic Design",
+    "slug": "imaa-history-publication-2007",
+    "image": "assets/projects/imaa-history-publication.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Tin Drum, 2007",
+    "year": "2007",
+    "collaborator": "Stephan Schulz",
+    "link": "",
+    "role": "Firmware, Hardware, Performance",
+    "slug": "tin-drum-2007",
+    "image": "assets/projects/tin-drum.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Rue Berri (a Travelrama), 2007",
+    "year": "2007",
+    "collaborator": "Stephan Schulz",
+    "link": "",
+    "role": "Performance, Software",
+    "slug": "rue-berri-a-travelrama-2007",
+    "image": "assets/projects/rue-berri-a-travelrama.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Drumline, 2007",
+    "year": "2007",
+    "collaborator": "Stephan Schulz",
+    "link": "",
+    "role": "",
+    "slug": "drumline-2007",
+    "image": "assets/projects/drumline.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Stellar Dynamic, 2007",
+    "year": "2007",
+    "collaborator": "Stephan Schulz",
+    "link": "",
+    "role": "",
+    "slug": "stellar-dynamic-2007",
+    "image": "assets/projects/stellar-dynamic.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Kerzen, 2006",
+    "year": "2006",
+    "collaborator": "Nelson Vergara",
+    "link": "http://www.nelsonvergara.com",
+    "role": "Software",
+    "slug": "kerzen-2006",
+    "image": "assets/projects/kerzen.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Overhead Overheard, 2006",
+    "year": "2006",
+    "collaborator": "Stephan Schulz",
+    "link": "",
+    "role": "Performance",
+    "slug": "overhead-overheard-2006",
+    "image": "assets/projects/overhead-overheard.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Exercise Machine, 2006",
+    "year": "2006",
+    "collaborator": "Stephan Schulz",
+    "link": "",
+    "role": "Performance",
+    "slug": "exercise-machine-2006",
+    "image": "assets/projects/exercise-machine.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Equally Distant From Both Sides, 2006",
+    "year": "2006",
+    "collaborator": "Stephan Schulz",
+    "link": "",
+    "role": "Performance",
+    "slug": "equally-distant-from-both-sides-2006",
+    "image": "assets/projects/equally-distant-from-both-sides.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Sight Seeing, 2005",
+    "year": "2005",
+    "collaborator": "Stephan Schulz",
+    "link": "",
+    "role": "",
+    "slug": "sight-seeing-2005",
+    "image": "assets/projects/sight-seeing.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Ontario Street (a Travelrama), 2004",
+    "year": "2004",
+    "collaborator": "Stephan Schulz",
+    "link": "",
+    "role": "",
+    "slug": "ontario-street-a-travelrama-2004",
+    "image": "assets/projects/ontario-street-a-travelrama.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Feuerland, 2004",
+    "year": "2004",
+    "collaborator": "Sven Knauth, Stephan Schulz",
+    "link": "",
+    "role": "Animation",
+    "slug": "feuerland-2004",
+    "image": "assets/projects/feuerland.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Zerrfalten - Desplegamientos, 2003",
+    "year": "2003",
+    "collaborator": "Nelson Vergara, Stephan Schulz",
+    "link": "",
+    "role": "",
+    "slug": "zerrfalten--desplegamientos-2003",
+    "image": "assets/projects/zerrfalten--desplegamientos.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Walk The Line, 2002",
+    "year": "2002",
+    "collaborator": "Stephan Schulz",
+    "link": "",
+    "role": "",
+    "slug": "walk-the-line-2002",
+    "image": "assets/projects/walk-the-line.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Prager Zoo / Zoo of Prague, 2002",
+    "year": "2002",
+    "collaborator": "Stephan Schulz",
+    "link": "",
+    "role": "Animation",
+    "slug": "prager-zoo--zoo-of-prague-2002",
+    "image": "assets/projects/prager-zoo--zoo-of-prague.jpg",
+    "hasDetailPage": false
+  },
+  {
+    "name": "Kreislaufen / Circle Walking, 2002",
+    "year": "2002",
+    "collaborator": "Nelson Vergara, Stephan Schulz",
+    "link": "",
+    "role": "Video",
+    "slug": "kreislaufen--circle-walking-2002",
+    "image": "assets/projects/kreislaufen--circle-walking.jpg",
+    "hasDetailPage": false
+  },
+  {
+    "name": "Prinzelberg / The Prince of Berlin, 2001",
+    "year": "2001",
+    "collaborator": "Nelson Vergara, Stephan Schulz",
+    "link": "",
+    "role": "Animation",
+    "slug": "prinzelberg--the-prince-of-berlin-2001",
+    "image": "assets/projects/prinzelberg--the-prince-of-berlin.jpg",
+    "hasDetailPage": false
+  },
+  {
+    "name": "Trilogy of a Couple, 2001",
+    "year": "2001",
+    "collaborator": "Stephan Schulz",
+    "link": "",
+    "role": "Animation",
+    "slug": "trilogy-of-a-couple-2001",
+    "image": "assets/projects/trilogy-of-a-couple.png",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Zeitraumlupe, 2001",
+    "year": "2001",
+    "collaborator": "Stephan Schulz and Julia Klieman",
+    "link": "",
+    "role": "Software",
+    "slug": "zeitraumlupe-2001",
+    "image": "assets/projects/zeitraumlupe.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Grüßt uns're Berge, 2000",
+    "year": "2000",
+    "collaborator": "Sven Knauth, Stephan Schulz",
+    "link": "",
+    "role": "Animation",
+    "slug": "grüßt-uns're-berge-2000",
+    "image": "assets/projects/grüßt-uns're-berge.jpg",
+    "hasDetailPage": false
+  }
+]

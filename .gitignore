@@ -1,0 +1,57 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Thumbnails
+Thumbs.db
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+
+# Build outputs (if you add build tools later)
+dist/
+build/
+*.map
+
+# Node modules (if you add npm later)
+node_modules/
+
+notion-page/
+# Optional: Notion export files (keep organized)
+notion-export/
+*.zip
+
+*.jpg
+*.png
+*.gif
+*.svg
+*.webp
+*.mp4
+*.mov
+*.mp3
+*.wav
+*.ogg
+*.pdf
+*.docx
+*.doc
