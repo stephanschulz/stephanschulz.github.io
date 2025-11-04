@@ -3,6 +3,7 @@ import csv
 import json
 import os
 from pathlib import Path
+import unicodedata
 
 # Read the CSV file
 projects = []
@@ -23,22 +24,39 @@ with open(csv_path, 'r', encoding='utf-8-sig') as f:
         slug = name.lower()
         # Remove year from slug for image filename
         slug_no_year = slug.split(',')[0].strip()
+        # Handle slashes - remove them for slug but keep spaces around them
+        slug_no_year = slug_no_year.replace(' / ', '-').replace('/', '-')
         slug_no_year = slug_no_year.replace(':', '').replace('&', 'and')
         slug_no_year = slug_no_year.replace(' ', '-').replace('(', '').replace(')', '')
-        slug_no_year = slug_no_year.replace('/', '-').replace('+', '-')
-        slug_no_year = slug_no_year.replace('--', '-').replace('é', 'e').replace('ó', 'o')
+        slug_no_year = slug_no_year.replace('+', '-')
+        slug_no_year = slug_no_year.replace('--', '-').replace('---', '-')
+        slug_no_year = slug_no_year.replace('é', 'e').replace('ó', 'o').replace('ü', 'u')
+        slug_no_year = slug_no_year.replace("'", '')
         
         # Full slug with year for detail pages
         slug = name.lower()
+        slug = slug.replace(' / ', '-').replace('/', '-')
         slug = slug.replace(',', '').replace(':', '').replace('&', 'and')
         slug = slug.replace(' ', '-').replace('(', '').replace(')', '')
-        slug = slug.replace('/', '-').replace('+', '-')
-        slug = slug.replace('--', '-').replace('é', 'e').replace('ó', 'o')
+        slug = slug.replace('+', '-')
+        slug = slug.replace('--', '-').replace('---', '-')
+        slug = slug.replace('é', 'e').replace('ó', 'o').replace('ü', 'u')
+        slug = slug.replace("'", '')
         
         # Find corresponding folder and image
+        # Handle slashes in names - Notion folders use spaces instead
+        name_base = name.split(',')[0].strip()
+        name_base_normalized = name_base.replace(' / ', ' ')
+        
+        # Normalize Unicode for proper matching (macOS uses NFD, CSV uses NFC)
+        name_base_norm = unicodedata.normalize('NFC', name_base)
+        name_base_normalized_norm = unicodedata.normalize('NFC', name_base_normalized)
+        
         folder_candidates = [
             f for f in os.listdir(projects_dir) 
-            if os.path.isdir(os.path.join(projects_dir, f)) and name.split(',')[0] in f
+            if os.path.isdir(os.path.join(projects_dir, f)) and 
+            (name_base_norm in unicodedata.normalize('NFC', f) or 
+             name_base_normalized_norm in unicodedata.normalize('NFC', f))
         ]
         
         image_path = None

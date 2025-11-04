@@ -5,6 +5,7 @@ import shutil
 from pathlib import Path
 from bs4 import BeautifulSoup
 import re
+import unicodedata
 
 # Load projects data
 with open('projects-data.json', 'r', encoding='utf-8') as f:
@@ -21,14 +22,23 @@ def clean_slug(text):
     slug = slug.replace(',', '').replace(':', '').replace('&', 'and')
     slug = slug.replace(' ', '-').replace('(', '').replace(')', '')
     slug = slug.replace('/', '-').replace('+', '-')
-    slug = slug.replace('--', '-').replace('é', 'e').replace('ó', 'o')
+    slug = slug.replace('--', '-').replace('---', '-')
+    slug = slug.replace('é', 'e').replace('ó', 'o').replace('ü', 'u')
+    slug = slug.replace("'", '')
     return slug
 
 def copy_project_images(project_name, slug):
     """Copy all images from project folder to assets"""
-    # Find the project folder
+    # Find the project folder with Unicode normalization
+    name_base = project_name.split(',')[0].strip()
+    name_base_norm = unicodedata.normalize('NFC', name_base)
+    name_base_normalized = name_base.replace(' / ', ' ')
+    name_base_normalized_norm = unicodedata.normalize('NFC', name_base_normalized)
+    
     folders = [f for f in os.listdir(notion_dir) 
-               if os.path.isdir(os.path.join(notion_dir, f)) and project_name.split(',')[0] in f]
+               if os.path.isdir(os.path.join(notion_dir, f)) and 
+               (name_base_norm in unicodedata.normalize('NFC', f) or 
+                name_base_normalized_norm in unicodedata.normalize('NFC', f))]
     
     if not folders:
         return []
@@ -48,9 +58,16 @@ def copy_project_images(project_name, slug):
 
 def parse_notion_html(project_name):
     """Extract content from Notion HTML export"""
-    # Find the HTML file
+    # Find the HTML file - handle slashes and Unicode normalization
+    name_base = project_name.split(',')[0].strip()
+    name_base_norm = unicodedata.normalize('NFC', name_base)
+    name_base_normalized = name_base.replace(' / ', ' ')
+    name_base_normalized_norm = unicodedata.normalize('NFC', name_base_normalized)
+    
     html_files = [f for f in os.listdir(notion_dir) 
-                  if f.endswith('.html') and project_name.split(',')[0] in f]
+                  if f.endswith('.html') and 
+                  (name_base_norm in unicodedata.normalize('NFC', f) or 
+                   name_base_normalized_norm in unicodedata.normalize('NFC', f))]
     
     if not html_files:
         return None

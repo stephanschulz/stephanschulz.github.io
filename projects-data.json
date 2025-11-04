@@ -357,7 +357,7 @@
     "role": "Software",
     "slug": "colorimètre-2017",
     "image": "assets/projects/colorimètre.jpg",
-    "hasDetailPage": false
+    "hasDetailPage": true
   },
   {
     "name": "Saturation Sampler, 2017",
@@ -607,7 +607,7 @@
     "role": "Software",
     "slug": "blätter-2011",
     "image": "assets/projects/blätter.jpg",
-    "hasDetailPage": false
+    "hasDetailPage": true
   },
   {
     "name": "Please Empty Your Pockets, 2010",
@@ -855,9 +855,9 @@
     "collaborator": "Stephan Schulz",
     "link": "",
     "role": "Animation",
-    "slug": "prager-zoo--zoo-of-prague-2002",
-    "image": "assets/projects/prager-zoo--zoo-of-prague.jpg",
-    "hasDetailPage": false
+    "slug": "prager-zoo-zoo-of-prague-2002",
+    "image": "assets/projects/prager-zoo-zoo-of-prague.jpg",
+    "hasDetailPage": true
   },
   {
     "name": "Kreislaufen / Circle Walking, 2002",
@@ -865,9 +865,9 @@
     "collaborator": "Nelson Vergara, Stephan Schulz",
     "link": "",
     "role": "Video",
-    "slug": "kreislaufen--circle-walking-2002",
-    "image": "assets/projects/kreislaufen--circle-walking.jpg",
-    "hasDetailPage": false
+    "slug": "kreislaufen-circle-walking-2002",
+    "image": "assets/projects/kreislaufen-circle-walking.jpg",
+    "hasDetailPage": true
   },
   {
     "name": "Prinzelberg / The Prince of Berlin, 2001",
@@ -875,9 +875,9 @@
     "collaborator": "Nelson Vergara, Stephan Schulz",
     "link": "",
     "role": "Animation",
-    "slug": "prinzelberg--the-prince-of-berlin-2001",
-    "image": "assets/projects/prinzelberg--the-prince-of-berlin.jpg",
-    "hasDetailPage": false
+    "slug": "prinzelberg-the-prince-of-berlin-2001",
+    "image": "assets/projects/prinzelberg-the-prince-of-berlin.jpg",
+    "hasDetailPage": true
   },
   {
     "name": "Trilogy of a Couple, 2001",
@@ -905,8 +905,8 @@
     "collaborator": "Sven Knauth, Stephan Schulz",
     "link": "",
     "role": "Animation",
-    "slug": "grüßt-uns're-berge-2000",
-    "image": "assets/projects/grüßt-uns're-berge.jpg",
-    "hasDetailPage": false
+    "slug": "grußt-unsre-berge-2000",
+    "image": "assets/projects/grußt-unsre-berge.jpg",
+    "hasDetailPage": true
   }
 ]

@@ -1,0 +1,20 @@
+Stephan Schulz / Projects and Artworks / Zoom Pavilion, 2015
+Zoom Pavilion, 2015
+👤 for
+Rafael Lozano-Hemmer
+# Year
+2015
+🔗 Official Site
+lozano-hemmer.com/zoom_pavilion.php
+📋 I did
+SoftwareSourcing
+
+content: face-detection algorithms, projectors, 12 cameras, 4x computers, IR illuminators
+"Zoom Pavilion" is an interactive installation that consists of immersive projection on three walls, fed by 12 computerized surveillance systems trained on the public. The piece uses face recognition algorithms to detect the presence of participants and record their spatial relationship within the exhibition space. Zoom Pavilion is at once an experimental platform for self-representation and a giant microscope to connect the public to each other and track their assembly. Independent robotic cameras zoom in to amplify the images of the public with up to 35x magnification: the zooming sequences are disorienting as they change the entire image “landscape” from easily recognizable wide shots of the crowd to abstract close-ups. The whole installation is in a fluid state of camera movement, highlighting different participants and creating a constantly changing animation based on optical amplification and tracking.
+
+
+
+
+
+Acknowledgment
+This artwork by Rafael Lozano-Hemmer is the result of the combined efforts of a talented and diverse group of professionals. Each person has contributed unique skills and expertise to the creation of this piece. For more information about the team and their roles, please visit our official website.
