@@ -514,7 +514,9 @@ body {
 }
 
 .image-column img,
-.image-full img {
+.image-column video,
+.image-full img,
+.image-full video {
     width: 100%;
     border-radius: 3px;
     display: block;
