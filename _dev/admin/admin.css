@@ -211,7 +211,8 @@ body {
 }
 
 .btn-primary,
-.btn-secondary {
+.btn-secondary,
+.btn-danger {
     padding: 12px 24px;
     font-size: 14px;
     font-weight: 500;
@@ -249,6 +250,27 @@ body {
 
 .btn-secondary:hover {
     background: var(--bg-hover);
+}
+
+.btn-danger {
+    background: #dc3545;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #c82333;
+}
+
+.form-actions {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.btn-primary:disabled,
+.btn-secondary:disabled,
+.btn-danger:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
 /* Message Area */

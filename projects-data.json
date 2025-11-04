@@ -1,42 +1,12 @@
 [
   {
-    "name": "test 3, 2028",
-    "year": "2028",
-    "collaborator": "Hugo",
-    "link": "https://lozano-hemmer.com",
-    "role": "software",
-    "slug": "test-3-2028",
-    "image": "projects/test-3-2028/images/cover.jpg",
-    "hasDetailPage": true
-  },
-  {
-    "name": "test 2, 2027",
-    "year": "2027",
-    "collaborator": "Peter",
-    "link": "https://www.cnn.com",
-    "role": "hardware, wetware",
-    "slug": "test-2-2027",
-    "image": "projects/test-2-2027/images/cover.jpg",
-    "hasDetailPage": true
-  },
-  {
-    "name": "test project, 2026",
-    "year": "2026",
-    "collaborator": "my self",
-    "link": "https://www.cbc.ca",
-    "role": "software, hardware",
-    "slug": "test-project-2026",
-    "image": "projects/test-project-2026/images/cover.jpg",
-    "hasDetailPage": true
-  },
-  {
     "name": "Pulsos del agua, 2025",
     "year": "2025",
     "collaborator": "Nelson Vergara",
-    "link": "web.unal.edu.co",
+    "link": "https://web.unal.edu.co/investigacion/Publicaciones/5525?fbclid=IwY2xjawIfIkhleHRuA2FlbQIxMAABHVvnFosSnxkVaYmy5njOwcZXEHxdvm3rtxAX0G2leRVmfyv_uTs8Zyy2nA_aem_Mkw-ff0d4Ii2rrcXs95TzA",
     "role": "C++, Software",
     "slug": "pulsos-del-agua-2025",
-    "image": "projects/pulsos-del-agua-2025/images/cover.png",
+    "image": "projects/pulsos-del-agua-2025/images/cover.jpg",
     "hasDetailPage": true
   },
   {
@@ -56,7 +26,7 @@
     "link": "https://www.lozano-hemmer.com/kristallstimmen.php",
     "role": "Hardware",
     "slug": "kristallstimmen-2024",
-    "image": "projects/kristallstimmen-2024/images/cover.jpg",
+    "image": "projects/kristallstimmen-2024/images/cover.png",
     "hasDetailPage": true
   },
   {

@@ -34,6 +34,9 @@ function initializeEventListeners() {
         disableForm();
         hideMessage();
     });
+    
+    // Delete button
+    document.getElementById('delete-btn').addEventListener('click', handleDelete);
 }
 
 async function loadProjectsList() {
@@ -426,10 +429,60 @@ async function handleSubmit(e) {
     }
 }
 
+async function handleDelete(e) {
+    const projectName = document.getElementById('name').value;
+    const year = document.getElementById('year').value;
+    const displayName = `${projectName}, ${year}`;
+    
+    // Confirm deletion
+    if (!confirm(`Are you sure you want to delete "${displayName}"?\n\nThis will permanently delete:\n• Project folder and all files\n• All images\n• Entry from main page\n\nThis cannot be undone!`)) {
+        return;
+    }
+    
+    const deleteBtn = document.getElementById('delete-btn');
+    const btnText = deleteBtn.querySelector('.btn-text');
+    const btnLoading = deleteBtn.querySelector('.btn-loading');
+    
+    // Disable button and show loading
+    deleteBtn.disabled = true;
+    btnText.style.display = 'none';
+    btnLoading.style.display = 'inline-flex';
+    
+    try {
+        const response = await fetch(`/api/delete-project/${currentSlug}`, {
+            method: 'DELETE'
+        });
+        
+        const data = await response.json();
+        
+        if (!response.ok) {
+            throw new Error(data.error || 'Failed to delete project');
+        }
+        
+        showMessage(`Project "${displayName}" deleted successfully! Redirecting...`, 'success');
+        
+        // Redirect to main page after a short delay
+        setTimeout(() => {
+            window.location.href = '/index.html';
+        }, 2000);
+        
+    } catch (error) {
+        showMessage(error.message, 'error');
+        deleteBtn.disabled = false;
+        btnText.style.display = 'inline';
+        btnLoading.style.display = 'none';
+    }
+}
+
 function enableForm() {
     const form = document.getElementById('project-form');
     form.style.opacity = '1';
     form.style.pointerEvents = 'auto';
+    
+    // Enable delete button
+    const deleteBtn = document.getElementById('delete-btn');
+    deleteBtn.disabled = false;
+    deleteBtn.style.display = 'block';
 }
 
 function disableForm() {
@@ -440,6 +493,11 @@ function disableForm() {
     loadedImages = [];
     originalImages = [];
     document.getElementById('images-container').innerHTML = '<p class="placeholder-text">Select a project to see its images</p>';
+    
+    // Disable and hide delete button
+    const deleteBtn = document.getElementById('delete-btn');
+    deleteBtn.disabled = true;
+    deleteBtn.style.display = 'none';
     
     // Reset preview
     document.getElementById('preview-name').textContent = 'Select a project';

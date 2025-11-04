@@ -261,6 +261,9 @@ def list_projects():
             if not p.get('isCV', False)
         ]
         
+        # Sort alphabetically by name
+        project_list.sort(key=lambda x: x['name'].lower())
+        
         return jsonify({'projects': project_list})
     except Exception as e:
         return jsonify({'error': str(e)}), 500
@@ -309,6 +312,40 @@ def load_project(slug):
             'acknowledgment': content.get('acknowledgment', ''),
             'images': images
         })
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/api/delete-project/<slug>', methods=['DELETE'])
+def delete_project(slug):
+    """Delete a project"""
+    try:
+        project_dir = os.path.join('projects', slug)
+        
+        # Check if project exists
+        if not os.path.exists(project_dir):
+            return jsonify({'error': 'Project not found'}), 404
+        
+        # Remove project directory and all contents
+        shutil.rmtree(project_dir)
+        print(f"Deleted project folder: {project_dir}")
+        
+        # Update projects-data.json
+        with open('projects-data.json', 'r', encoding='utf-8') as f:
+            projects = json.load(f)
+        
+        # Remove project from list
+        projects = [p for p in projects if p['slug'] != slug]
+        
+        with open('projects-data.json', 'w', encoding='utf-8') as f:
+            json.dump(projects, f, indent=2, ensure_ascii=False)
+        
+        print(f"Removed {slug} from projects-data.json")
+        
+        return jsonify({
+            'success': True,
+            'message': f'Project "{slug}" deleted successfully'
+        })
+        
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 

@@ -8,12 +8,20 @@ This folder contains scripts and documentation used for building and maintaining
 Main script to generate project pages from Notion export.
 
 **Usage:**
+
 ```bash
 python3 _dev/generate-notion-pages.py
 ```
+test run website with
+```python -m http.server 8000```
+then in browser go to ```http://localhost:8001/```
 
 API to create a new project page
 ```python3 _dev/admin-server.py```
+
+API to edit or delete existing project
+```python3 _dev/admin-edit-server.py```
+this auto opens a page at http://127.0.0.1:5001
 
 **What it does:**
 - Parses Notion HTML exports
