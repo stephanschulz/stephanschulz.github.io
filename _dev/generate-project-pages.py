@@ -4,6 +4,11 @@ import os
 from pathlib import Path
 import html
 
+# Get the project root directory (parent of _dev folder)
+script_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.dirname(script_dir)
+os.chdir(project_root)
+
 # Load projects data
 with open('projects-data.json', 'r', encoding='utf-8') as f:
     projects = json.load(f)

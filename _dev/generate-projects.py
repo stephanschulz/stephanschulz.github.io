@@ -5,6 +5,11 @@ import os
 from pathlib import Path
 import unicodedata
 
+# Get the project root directory (parent of _dev folder)
+script_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.dirname(script_dir)
+os.chdir(project_root)
+
 # Read the CSV file
 projects = []
 csv_path = 'notion-page/Stephan Schulz/Projects and Artworks f8c7057cd41f4367aa5303e122fd0b46.csv'
