@@ -132,13 +132,17 @@ def generate_project_page(project, content, images):
                 </tr>'''
     
     if official_site:
+        # Clean display of link - just show domain or "View Project"
+        display_text = official_site.replace('https://', '').replace('http://', '').replace('www.', '')
+        if len(display_text) > 50:
+            display_text = 'View Project'
         props_html += f'''
                 <tr class="property-row">
                     <th>
                         <span class="icon">🔗</span>
                         Official Site
                     </th>
-                    <td><a href="{official_site}" target="_blank" class="url-value">{official_site}</a></td>
+                    <td><a href="{official_site}" target="_blank" class="url-value">{display_text}</a></td>
                 </tr>'''
     
     if roles:
@@ -178,14 +182,30 @@ def generate_project_page(project, content, images):
             <img src="{img}" alt="{project['name']}" loading="lazy">
         </div>'''
     
-    # Build description
+    # Build description - convert URLs to links
     description_html = ''
-    for para in content['description']:
-        description_html += f'<p>{para}</p>\n        '
+    import re
+    url_pattern = r'(https?://[^\s]+)'
     
-    # Build acknowledgment
+    for para in content['description']:
+        # Convert URLs in text to clickable links
+        def replace_url(match):
+            url = match.group(0)
+            # Clean display text - show domain
+            display = url.replace('https://', '').replace('http://', '').split('/')[0]
+            return f'<a href="{url}" target="_blank" class="url-value">{display}</a>'
+        
+        para_with_links = re.sub(url_pattern, replace_url, para)
+        description_html += f'<p>{para_with_links}</p>\n        '
+    
+    # Build acknowledgment - add Rafael Lozano-Hemmer footer if applicable
     acknowledgment_html = ''
-    if content['acknowledgment']:
+    if 'Rafael Lozano-Hemmer' in collaborator or 'rafael lozano-hemmer' in collaborator.lower():
+        acknowledgment_html = '''
+        <hr>
+        <h3>Acknowledgment</h3>
+        <p>This artwork by Rafael Lozano-Hemmer is the result of the combined efforts of a talented and diverse group of professionals. Each person has contributed unique skills and expertise to the creation of this piece. For more information about the team and their roles, please visit our <a href="https://www.lozano-hemmer.com/" target="_blank" class="url-value">official website</a>.</p>'''
+    elif content['acknowledgment']:
         acknowledgment_html = f'''
         <hr>
         <h3>Acknowledgment</h3>
@@ -272,6 +292,9 @@ def generate_project_page(project, content, images):
             border-top: 1px solid var(--border-color);
             margin: 48px 0 24px 0;
         }}
+        hr.properties-divider {{
+            margin: 32px 0;
+        }}
         h3 {{
             font-size: 18px;
             font-weight: 600;
@@ -301,10 +324,12 @@ def generate_project_page(project, content, images):
             {props_html}
         </header>
 
+        <hr class="properties-divider">
+
         <div class="page-body">
-            {images_html}
-            
             {description_html}
+            
+            {images_html}
             
             {acknowledgment_html}
         </div>

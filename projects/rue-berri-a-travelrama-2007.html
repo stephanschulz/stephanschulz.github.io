@@ -79,6 +79,9 @@
             border-top: 1px solid var(--border-color);
             margin: 48px 0 24px 0;
         }
+        hr.properties-divider {
+            margin: 32px 0;
+        }
         h3 {
             font-size: 18px;
             font-weight: 600;
@@ -133,7 +136,28 @@
         </table>
         </header>
 
+        <hr class="properties-divider">
+
         <div class="page-body">
+            <p>Rue Berri is an outdoor performance that feeds an interactive video installation inside in the gallery.</p>
+        <p>During a multi-day performance I push up and down Berri street a custom-made camera dolly which is outfitted with video and position recording equipment. This “new media object” allows me to interact with the people and activities I encounter and to record them in their particular space and time.</p>
+        <p>The data collected from these encounters is sent to the gallery. Here, on a wide screen projection, the gallery visitor can see a processed accumulation of videos representing the street. Interacting with the projection, the viewer plays with the linearity of time and space by activating and layering short video clips.</p>
+        <p>By using the slit-scan imaging technique to segment and reassemble the video footage I am able to transform a particular space and time sequence into a perceptible space-time object with a unique aesthetic quality. It now becomes possible to perceive and analyze the correlation between time and space in a non-linear way.</p>
+        <p>Neighbors whose daily routines fall slightly out of synch are now woven together on the same screen. The idea of time as a non-reversible stream should be challenged, because it discourages us to explore the wide range of possible human interactions.</p>
+        <p>How it works.</p>
+        <p>The projected image can be described in two parts part one being the long panoramic background image and part two being the short street level video windows that are moving the left and to the right, on top of the background image.</p>
+        <p>Part of my interest in this work is to condense the time and events that happen on the street. I spend multiple days on Rue Berri with my costume made camera dolly to record video footage of my interaction with the street. I recorded video and location of the video with the help of the dolly. That's why you can see a mechanical computer mouse and an RFID tag reader attached to the dolly. Both were connected to a laptop. The mouse gave me my relative position and the RFID tags supplied me with recurring absolute markers.</p>
+        <p>The document of my time outside on the street can now be experienced inside in the gallery.</p>
+        <p>A video tracking system in the gallery tracks the visitor's position in the room. Once a visitor steps closer to the screen a MaxMSP patch places a street-video on the screen close to the visitor. Once a street-video is placed it starts moving to the left or right, depending on what my movements were on the street. I choose never to allow more than three videos to be placed at the same time.</p>
+        <p>So far I have 74 street-videos. In most of them I am recording people walking, in some I have conversations with people in front and behind the camera, others are 'empty' and just show the street.</p>
+        <p>I entered each video in to a database. When a visitor steps closer to the screen the database is searched for a street-video that at one point of it's duration occupies the same space which the visitor can see right in front of her. This means the selection and placement is not random.</p>
+        <p>Now the visitor can choose to let the street life pass by - like one would while standing on a street corner - or the visitor can walk with the street-video and listen to the accompanying sound.</p>
+        <p>Over six speakers the sound of each video travels pans in unity with the video's location. This is done through a multi-channel sound card and an other MaxMSP patch.</p>
+        <p>About the background image.Once in a while the projected system rotates so that a three-dimensional view on to the whole scene is revealed. One can see three panoramic bands interweaving with one-another. Each panoramic band shows a different time of day. They are pre-made and do not change in themselves. Though each is performing a waving movement and weaves in to the other bands. When projected system rotates back to is 'normal' state - the front view - the three separate bands and their wave movement can not be seen. Instead the visitor now sees one wide panoramic band of the street that shows multiple times at once. That is the reason why sometimes the background image shows the street at night or day.</p>
+        <p>To create those bands I picked three of the 74 clips, three that have video footage that cover the whole 50 meters from the corner in to the street. I wrote an other MaxMSP patch take one video and scans through each frame. The patch copies a 5 pixel thick vertical pixel line from the center or each frame and pasts them one beside the other. Since the video is basically a travel shot revealing the street, each frame shows a slightly new part of the street. This technique is called slit-scan.(see <a href="http://www.flong.com/writings/lists/list_slit_scan.html" target="_blank" class="url-value">www.flong.com</a> for more information)</p>
+        <p>The projected part of the work is all done in MaxMSP through the use of Jitter and openGL.</p>
+        
+            
             
         <div class="image-grid">
             <div class="image-column">
@@ -167,25 +191,6 @@
         <div class="image-full">
             <img src="../assets/project-images/rue-berri-a-travelrama-2007/thumb.jpg" alt="Rue Berri (a Travelrama), 2007" loading="lazy">
         </div>
-            
-            <p>Rue Berri is an outdoor performance that feeds an interactive video installation inside in the gallery.</p>
-        <p>During a multi-day performance I push up and down Berri street a custom-made camera dolly which is outfitted with video and position recording equipment. This “new media object” allows me to interact with the people and activities I encounter and to record them in their particular space and time.</p>
-        <p>The data collected from these encounters is sent to the gallery. Here, on a wide screen projection, the gallery visitor can see a processed accumulation of videos representing the street. Interacting with the projection, the viewer plays with the linearity of time and space by activating and layering short video clips.</p>
-        <p>By using the slit-scan imaging technique to segment and reassemble the video footage I am able to transform a particular space and time sequence into a perceptible space-time object with a unique aesthetic quality. It now becomes possible to perceive and analyze the correlation between time and space in a non-linear way.</p>
-        <p>Neighbors whose daily routines fall slightly out of synch are now woven together on the same screen. The idea of time as a non-reversible stream should be challenged, because it discourages us to explore the wide range of possible human interactions.</p>
-        <p>How it works.</p>
-        <p>The projected image can be described in two parts part one being the long panoramic background image and part two being the short street level video windows that are moving the left and to the right, on top of the background image.</p>
-        <p>Part of my interest in this work is to condense the time and events that happen on the street. I spend multiple days on Rue Berri with my costume made camera dolly to record video footage of my interaction with the street. I recorded video and location of the video with the help of the dolly. That's why you can see a mechanical computer mouse and an RFID tag reader attached to the dolly. Both were connected to a laptop. The mouse gave me my relative position and the RFID tags supplied me with recurring absolute markers.</p>
-        <p>The document of my time outside on the street can now be experienced inside in the gallery.</p>
-        <p>A video tracking system in the gallery tracks the visitor's position in the room. Once a visitor steps closer to the screen a MaxMSP patch places a street-video on the screen close to the visitor. Once a street-video is placed it starts moving to the left or right, depending on what my movements were on the street. I choose never to allow more than three videos to be placed at the same time.</p>
-        <p>So far I have 74 street-videos. In most of them I am recording people walking, in some I have conversations with people in front and behind the camera, others are 'empty' and just show the street.</p>
-        <p>I entered each video in to a database. When a visitor steps closer to the screen the database is searched for a street-video that at one point of it's duration occupies the same space which the visitor can see right in front of her. This means the selection and placement is not random.</p>
-        <p>Now the visitor can choose to let the street life pass by - like one would while standing on a street corner - or the visitor can walk with the street-video and listen to the accompanying sound.</p>
-        <p>Over six speakers the sound of each video travels pans in unity with the video's location. This is done through a multi-channel sound card and an other MaxMSP patch.</p>
-        <p>About the background image.Once in a while the projected system rotates so that a three-dimensional view on to the whole scene is revealed. One can see three panoramic bands interweaving with one-another. Each panoramic band shows a different time of day. They are pre-made and do not change in themselves. Though each is performing a waving movement and weaves in to the other bands. When projected system rotates back to is 'normal' state - the front view - the three separate bands and their wave movement can not be seen. Instead the visitor now sees one wide panoramic band of the street that shows multiple times at once. That is the reason why sometimes the background image shows the street at night or day.</p>
-        <p>To create those bands I picked three of the 74 clips, three that have video footage that cover the whole 50 meters from the corner in to the street. I wrote an other MaxMSP patch take one video and scans through each frame. The patch copies a 5 pixel thick vertical pixel line from the center or each frame and pasts them one beside the other. Since the video is basically a travel shot revealing the street, each frame shows a slightly new part of the street. This technique is called slit-scan.(see http://www.flong.com/writings/lists/list_slit_scan.html for more information)</p>
-        <p>The projected part of the work is all done in MaxMSP through the use of Jitter and openGL.</p>
-        
             
             
         </div>
