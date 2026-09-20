@@ -102,8 +102,12 @@ body {
 .role {
     font-size: 14px;
     color: var(--text-primary);
-    margin-bottom: var(--spacing-xl);
+    margin-bottom: var(--spacing-xs);
     line-height: 1.5;
+}
+
+.role:last-of-type {
+    margin-bottom: var(--spacing-xl);
 }
 
 .role a {
