@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Load projects from JSON
 async function loadProjects() {
     try {
-        const response = await fetch('projects-data.json');
+        const response = await fetch('projects-data.json', { cache: 'no-cache' }); // revalidate so new projects show without waiting for the 10-min browser cache
         allProjects = await response.json();
         displayProjects();
     } catch (error) {
