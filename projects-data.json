@@ -1,5 +1,65 @@
 [
   {
+    "name": "Black Hole, 2026",
+    "year": "2026",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "https://www.lozano-hemmer.com/black_hole.php",
+    "role": "Hardware, Firmware",
+    "slug": "black-hole-2026",
+    "image": "projects/black-hole-2026/images/cover.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Undercurrents, 2026",
+    "year": "2026",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "https://www.lozano-hemmer.com/undercurrents.php",
+    "role": "Hardware",
+    "slug": "undercurrents-2026",
+    "image": "projects/undercurrents-2026/images/cover.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Pulse Garden, 2026",
+    "year": "2026",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "https://www.lozano-hemmer.com/pulse_garden.php",
+    "role": "Software, Hardware",
+    "slug": "pulse-garden-2026",
+    "image": "projects/pulse-garden-2026/images/cover.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Spiral Reflector, 2026",
+    "year": "2026",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "https://www.lozano-hemmer.com/spiral_reflector.php",
+    "role": "Hardware",
+    "slug": "spiral-reflector-2026",
+    "image": "projects/spiral-reflector-2026/images/cover.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Collider Beacon, 2026",
+    "year": "2026",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "https://www.lozano-hemmer.com/collider_beacon.php",
+    "role": "Software",
+    "slug": "collider-beacon-2026",
+    "image": "projects/collider-beacon-2026/images/cover.jpg",
+    "hasDetailPage": true
+  },
+  {
+    "name": "Voice Path, 2026",
+    "year": "2026",
+    "collaborator": "Rafael Lozano-Hemmer",
+    "link": "https://www.lozano-hemmer.com/voice_path.php",
+    "role": "Software",
+    "slug": "voice-path-2026",
+    "image": "projects/voice-path-2026/images/cover.jpg",
+    "hasDetailPage": true
+  },
+  {
     "name": "Pulse Canopy, 2025",
     "year": "2025",
     "collaborator": "Rafael Lozano-Hemmer",
